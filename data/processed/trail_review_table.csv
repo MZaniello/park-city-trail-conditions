@@ -1,0 +1,266 @@
+trail_name,segment_count,total_length_meters,total_length_miles,category,keep,notes
+Mid-Mountain Trail,40,11888.9,7.39,mountain_bike_trail,yes,Manually reviewed and confirmed
+9K Trail,10,7659.5,4.76,mountain_bike_trail,yes,Manually reviewed and confirmed
+Mother Urban,14,7212.8,4.48,mountain_bike_trail,yes,Manually reviewed and confirmed
+Rambler,18,6853.9,4.26,mountain_bike_trail,yes,Manually reviewed and confirmed
+CMG,11,6316.2,3.92,mountain_bike_trail,yes,Manually reviewed and confirmed
+Lost Prospector,17,5852.3,3.64,mountain_bike_trail,yes,Manually reviewed and confirmed
+Big Easy,13,5370.8,3.34,mountain_bike_trail,yes,Manually reviewed and confirmed
+Deer Valley Service,32,5029.8,3.13,service_route,no,Manually reviewed and excluded
+Jenni's Trail upper,11,5014.0,3.12,mountain_bike_trail,yes,Manually reviewed and confirmed
+Spiro Trail,9,4967.3,3.09,mountain_bike_trail,yes,Manually reviewed and confirmed
+Ripple Trail,22,4871.6,3.03,mountain_bike_trail,yes,Manually reviewed and confirmed
+Armstrong,2,4810.4,2.99,mountain_bike_trail,yes,Manually reviewed and confirmed
+Flagstaff Loop,20,4600.2,2.86,mountain_bike_trail,yes,Manually reviewed and confirmed
+Tidal Wave,13,4299.6,2.67,mountain_bike_trail,yes,Manually reviewed and confirmed
+Cyn City,3,4211.6,2.62,mountain_bike_trail,yes,Manually reviewed and confirmed
+Keystone Trail,8,4190.2,2.6,mountain_bike_trail,yes,Manually reviewed and confirmed
+Round Valley Express,22,4029.4,2.5,mountain_bike_trail,yes,Manually reviewed and confirmed
+Solamere,11,3768.7,2.34,mountain_bike_trail,yes,Manually reviewed and confirmed
+Empire Link,9,3544.9,2.2,mountain_bike_trail,yes,Manually reviewed and confirmed
+Apex,6,3541.2,2.2,mountain_bike_trail,yes,Manually reviewed and confirmed
+Thaynes Road,17,3532.8,2.2,uncertain,,Needs review
+Holy Roller,11,3509.2,2.18,uncertain,,Needs review
+Naildriver,13,3346.0,2.08,uncertain,,Needs review
+McConkeys,12,3331.2,2.07,uncertain,,Needs review
+Regulator Trail,8,3267.9,2.03,uncertain,,Needs review
+Deer Crest,11,3203.4,1.99,uncertain,,Needs review
+Gap Loop,7,3093.9,1.92,uncertain,,Needs review
+Seldom Seen,7,3062.6,1.9,uncertain,,Needs review
+Johns Trail,6,2970.2,1.85,uncertain,,Needs review
+Rossi Hill Trail,10,2871.0,1.78,uncertain,,Needs review
+The Lookout,3,2764.5,1.72,uncertain,,Needs review
+Pipeline,5,2684.8,1.67,uncertain,,Needs review
+Snowtop,2,2678.9,1.66,uncertain,,Needs review
+Boulder,3,2672.4,1.66,uncertain,,Needs review
+Payday,7,2668.0,1.66,uncertain,,Needs review
+Lynx #2,3,2535.7,1.58,uncertain,,Needs review
+Downward Dog,3,2535.5,1.58,uncertain,,Needs review
+Drift Road,14,2535.4,1.58,uncertain,,Needs review
+Tommys Two Step,5,2482.5,1.54,uncertain,,Needs review
+Freemason,4,2475.1,1.54,uncertain,,Needs review
+Gotcha Cuttoff,7,2383.7,1.48,uncertain,,Needs review
+Undertow Trail,8,2334.7,1.45,uncertain,,Needs review
+Claim Jumper,11,2318.7,1.44,uncertain,,Needs review
+Jenni's Trail,7,2261.1,1.41,uncertain,,Needs review
+Pulp Friction,2,2225.8,1.38,uncertain,,Needs review
+TDS Ontario Bypass,14,2208.4,1.37,uncertain,,Needs review
+Ontario Canyon,12,2198.7,1.37,uncertain,,Needs review
+Tour De Homes,2,2190.2,1.36,uncertain,,Needs review
+Rademan Ridge,10,2151.3,1.34,uncertain,,Needs review
+Fast Pitch Trail,7,2129.3,1.32,uncertain,,Needs review
+Hat Trick Trail,5,2108.2,1.31,uncertain,,Needs review
+Corvair,5,2100.1,1.3,uncertain,,Needs review
+Team Big Bear,3,2096.0,1.3,uncertain,,Needs review
+Nowhere Elks,10,2053.2,1.28,uncertain,,Needs review
+Masonic,3,2046.5,1.27,uncertain,,Needs review
+Evil Empire,5,2024.6,1.26,uncertain,,Needs review
+Ontario Ridge Road,8,2023.7,1.26,uncertain,,Needs review
+Trestle,11,2021.9,1.26,uncertain,,Needs review
+Jupiter Access,9,2007.1,1.25,uncertain,,Needs review
+Skid Row,3,1977.4,1.23,uncertain,,Needs review
+Red Bull,5,1947.7,1.21,uncertain,,Needs review
+Valderoad,8,1917.2,1.19,uncertain,,Needs review
+King Road,4,1911.1,1.19,uncertain,,Needs review
+T&G,7,1885.9,1.17,uncertain,,Needs review
+Johns '99,3,1844.8,1.15,uncertain,,Needs review
+Lower Devo Trail,5,1804.4,1.12,uncertain,,Needs review
+Solamere Connector,1,1687.4,1.05,uncertain,,Needs review
+Twist and Shout,4,1686.5,1.05,uncertain,,Needs review
+Crescent Ridge,7,1679.1,1.04,uncertain,,Needs review
+Gambel Oak Trail,4,1658.2,1.03,uncertain,,Needs review
+Steps,5,1653.1,1.03,uncertain,,Needs review
+Backslide,4,1639.5,1.02,uncertain,,Needs review
+Sweeney Switchbacks,3,1631.0,1.01,uncertain,,Needs review
+Matt's Flat,13,1597.7,0.99,uncertain,,Needs review
+Sam's Trail,5,1547.3,0.96,uncertain,,Needs review
+Road to Ruby,6,1546.3,0.96,uncertain,,Needs review
+Silver Queen,1,1541.9,0.96,uncertain,,Needs review
+Somewhere Elks,1,1536.2,0.95,uncertain,,Needs review
+Flat Cable,10,1535.3,0.95,uncertain,,Needs review
+La Dee Duh,4,1530.0,0.95,uncertain,,Needs review
+Fat Lip,4,1529.0,0.95,uncertain,,Needs review
+Mojave,4,1528.8,0.95,uncertain,,Needs review
+Eagle Way,1,1475.6,0.92,uncertain,,Needs review
+Moosebones,5,1457.8,0.91,uncertain,,Needs review
+T&G 2,3,1416.6,0.88,uncertain,,Needs review
+Dawns Trail,1,1398.7,0.87,uncertain,,Needs review
+Shadow Lake,3,1342.0,0.83,uncertain,,Needs review
+Loose Moose,2,1340.3,0.83,uncertain,,Needs review
+Meadow Road,10,1334.2,0.83,uncertain,,Needs review
+Kari's,2,1326.4,0.82,uncertain,,Needs review
+PorcUclimb,3,1290.9,0.8,uncertain,,Needs review
+H.A.M.,3,1279.9,0.8,uncertain,,Needs review
+Fox Tail Trail,4,1271.9,0.79,uncertain,,Needs review
+Speedbag,3,1271.5,0.79,uncertain,,Needs review
+Daly Avenue,3,1265.5,0.79,uncertain,,Needs review
+Black Forest,2,1257.1,0.78,uncertain,,Needs review
+Woodside Gulch,5,1256.5,0.78,uncertain,,Needs review
+Tsunami,2,1224.3,0.76,uncertain,,Needs review
+Little Chief,3,1200.4,0.75,uncertain,,Needs review
+Tour De Suds (Upper),2,1197.4,0.74,uncertain,,Needs review
+Three Candles,1,1184.8,0.74,uncertain,,Needs review
+Gravel Road,5,1184.0,0.74,uncertain,,Needs review
+Corvair (Upper),3,1155.7,0.72,uncertain,,Needs review
+Wasatch Crest Connect,3,1145.6,0.71,uncertain,,Needs review
+Deer Camp,5,1137.2,0.71,uncertain,,Needs review
+First Time Return,7,1112.4,0.69,uncertain,,Needs review
+Grave Digger,3,1109.6,0.69,uncertain,,Needs review
+Seventy 101,7,1108.3,0.69,uncertain,,Needs review
+Old Homeward Bound,3,1103.3,0.69,uncertain,,Needs review
+NCS,6,1095.2,0.68,uncertain,,Needs review
+Link,5,1075.9,0.67,uncertain,,Needs review
+Old Skool,4,1065.6,0.66,uncertain,,Needs review
+Silver Spur,8,1064.3,0.66,uncertain,,Needs review
+South Sweeney,5,1064.1,0.66,uncertain,,Needs review
+Powerline Trail,2,1034.1,0.64,uncertain,,Needs review
+Payroll,2,1033.5,0.64,uncertain,,Needs review
+Lower Masonic,2,1019.1,0.63,uncertain,,Needs review
+Johns 99,1,999.7,0.62,uncertain,,Needs review
+April Mountain Trail,4,984.0,0.61,uncertain,,Needs review
+Daly Canyon,6,970.1,0.6,uncertain,,Needs review
+Flat Iron,3,964.4,0.6,uncertain,,Needs review
+Prospect,3,946.3,0.59,uncertain,,Needs review
+Trump,9,930.8,0.58,uncertain,,Needs review
+Practice Loops,4,905.9,0.56,uncertain,,Needs review
+Thaynes Canyon,2,903.4,0.56,uncertain,,Needs review
+Gambel Oak North,3,893.6,0.56,uncertain,,Needs review
+High Side,1,893.0,0.55,uncertain,,Needs review
+Lost Prospector Access,2,887.2,0.55,uncertain,,Needs review
+PCMR Road,4,886.8,0.55,uncertain,,Needs review
+First Time,9,884.6,0.55,uncertain,,Needs review
+Stiff Upper Lip,3,881.7,0.55,uncertain,,Needs review
+Village Trail / Pipeline,1,838.7,0.52,uncertain,,Needs review
+Eagle Trail,3,832.9,0.52,uncertain,,Needs review
+Quinn's Connect,4,794.9,0.49,uncertain,,Needs review
+Trappers Gate,3,785.3,0.49,uncertain,,Needs review
+Secret of My Success Trail,4,722.0,0.45,uncertain,,Needs review
+Sweeney Switchbacks Access,4,716.4,0.45,uncertain,,Needs review
+Silverlake Access Road,6,707.1,0.44,uncertain,,Needs review
+Tim Man,1,688.5,0.43,uncertain,,Needs review
+Trump / Boulder,1,671.1,0.42,uncertain,,Needs review
+Deer Camp Road,4,667.2,0.41,uncertain,,Needs review
+Old NCS Access,8,665.6,0.41,uncertain,,Needs review
+4:20,2,663.6,0.41,uncertain,,Needs review
+Bonanza Trail,2,659.4,0.41,uncertain,,Needs review
+Rosebud,3,651.2,0.4,uncertain,,Needs review
+Webster Road,3,645.5,0.4,uncertain,,Needs review
+Full Steam Billy,2,644.1,0.4,uncertain,,Needs review
+Empire Lodge,5,642.1,0.4,uncertain,,Needs review
+Powerline Service Road,3,627.1,0.39,service_route,no,Name suggests a service or access route
+Ashley Avenue,1,624.2,0.39,uncertain,,Needs review
+Pioneer Ridge,4,617.0,0.38,uncertain,,Needs review
+Super G,2,616.7,0.38,uncertain,,Needs review
+Gap Bypass Trail,5,613.6,0.38,uncertain,,Needs review
+Barrel Roll,2,590.6,0.37,uncertain,,Needs review
+Euston,2,579.8,0.36,uncertain,,Needs review
+Steps Access,5,577.2,0.36,uncertain,,Needs review
+Sunset,3,571.8,0.36,uncertain,,Needs review
+Miner's Mile,5,569.8,0.35,uncertain,,Needs review
+Cammy's,5,565.3,0.35,uncertain,,Needs review
+St. Regis Trail,4,557.9,0.35,uncertain,,Needs review
+Daly Bypass,2,544.4,0.34,uncertain,,Needs review
+Little Stick,3,541.8,0.34,uncertain,,Needs review
+Crescent Road / Crescent Ridge Road,1,540.0,0.34,uncertain,,Needs review
+Upper Loose,1,530.7,0.33,uncertain,,Needs review
+Fairway Hills Trail,2,530.5,0.33,uncertain,,Needs review
+Daly Grind,1,527.3,0.33,uncertain,,Needs review
+April Mountain Summit Trail / Sunridge Court,1,521.6,0.32,uncertain,,Needs review
+Finns,1,518.5,0.32,uncertain,,Needs review
+Aspen Slalom,1,516.1,0.32,uncertain,,Needs review
+Short Fuse,1,510.4,0.32,uncertain,,Needs review
+King Road Connector,2,502.2,0.31,uncertain,,Needs review
+Morning Sky Court / Fairway Hills Trail,1,499.6,0.31,uncertain,,Needs review
+Moosehouse,1,492.9,0.31,uncertain,,Needs review
+Sweeneys,5,492.3,0.31,uncertain,,Needs review
+Silver Lake Road,2,478.5,0.3,uncertain,,Needs review
+McHenry Avenue,1,467.4,0.29,uncertain,,Needs review
+Boot Hill,2,465.6,0.29,uncertain,,Needs review
+Gambel Oak Cut,1,454.8,0.28,uncertain,,Needs review
+SQ Connector Trail,2,447.1,0.28,uncertain,,Needs review
+Daily Overlook,1,447.0,0.28,uncertain,,Needs review
+Ore Cart,1,445.7,0.28,uncertain,,Needs review
+OMG,2,438.9,0.27,uncertain,,Needs review
+Pedalers Inn,2,424.4,0.26,uncertain,,Needs review
+Hang Time South,2,422.4,0.26,uncertain,,Needs review
+SOS,1,420.8,0.26,uncertain,,Needs review
+Equestrian,2,418.1,0.26,uncertain,,Needs review
+Holy Roller Access,3,393.7,0.24,uncertain,,Needs review
+Moose Poop,1,378.1,0.23,uncertain,,Needs review
+Boot Hill Connect,1,364.9,0.23,uncertain,,Needs review
+Ontario Mine Trailhead Access,1,363.1,0.23,uncertain,,Needs review
+Ontario Ridge,2,361.6,0.22,uncertain,,Needs review
+Twist & Shout,1,361.1,0.22,uncertain,,Needs review
+Lookout Access,2,360.1,0.22,uncertain,,Needs review
+Euston Drive / Euston,1,334.5,0.21,uncertain,,Needs review
+Upper Devo Trail,1,326.5,0.2,uncertain,,Needs review
+Johns Access,4,299.4,0.19,uncertain,,Needs review
+Pointy Rocks,2,293.6,0.18,uncertain,,Needs review
+Upper Loose Moose,1,285.4,0.18,uncertain,,Needs review
+Blazing Saddle,1,277.8,0.17,uncertain,,Needs review
+Matts Access,1,276.8,0.17,uncertain,,Needs review
+Village Pipeline Connector,1,267.6,0.17,uncertain,,Needs review
+Devo,3,249.5,0.16,uncertain,,Needs review
+Village Trail,1,246.9,0.15,uncertain,,Needs review
+Shenanigans,1,243.8,0.15,uncertain,,Needs review
+Ramble On,1,225.5,0.14,uncertain,,Needs review
+Deer Crest Access,1,214.9,0.13,uncertain,,Needs review
+Nick NAC,4,214.6,0.13,uncertain,,Needs review
+Izzy's Inferno (Dog Pound),2,213.4,0.13,uncertain,,Needs review
+Silver Star Access,1,210.0,0.13,uncertain,,Needs review
+Eagle Cove,1,204.2,0.13,uncertain,,Needs review
+Sunny Slopes Trail,3,199.4,0.12,uncertain,,Needs review
+Perrier Pass,1,192.4,0.12,uncertain,,Needs review
+Silver Star Drive,1,192.2,0.12,uncertain,,Needs review
+Mid-Mountain Connect,1,187.8,0.12,uncertain,,Needs review
+Drift Road / King Road,1,181.6,0.11,uncertain,,Needs review
+Empire Alternate,1,176.2,0.11,uncertain,,Needs review
+Town,2,172.5,0.11,uncertain,,Needs review
+Bow Hunter,1,170.1,0.11,uncertain,,Needs review
+Corvair Connector,1,164.4,0.1,uncertain,,Needs review
+Barrel Roll (West),1,160.6,0.1,uncertain,,Needs review
+Lila's Lair (Dog Pound),2,152.0,0.09,uncertain,,Needs review
+April Mountain Summit Trail,1,149.7,0.09,uncertain,,Needs review
+Fox Tail Cutoff,1,148.3,0.09,uncertain,,Needs review
+Iron Mountain Drive,1,143.2,0.09,uncertain,,Needs review
+Red Cloud Trail,1,141.5,0.09,uncertain,,Needs review
+Outlook,2,137.8,0.09,uncertain,,Needs review
+Quarry Road,2,134.0,0.08,uncertain,,Needs review
+Shadow Lake Cutoff,1,133.9,0.08,uncertain,,Needs review
+Cammy Connector,1,130.6,0.08,uncertain,,Needs review
+Root Cellar,1,126.4,0.08,uncertain,,Needs review
+St. Regis Connector,1,122.3,0.08,uncertain,,Needs review
+Jenni Payday,1,121.7,0.08,uncertain,,Needs review
+Piper's Playground (Dog Pound),1,119.2,0.07,uncertain,,Needs review
+Io Trail (Middle),1,106.9,0.07,uncertain,,Needs review
+Corvair Access,2,101.3,0.06,uncertain,,Needs review
+Sweeneys Connector,1,100.2,0.06,uncertain,,Needs review
+Two Step,1,95.2,0.06,uncertain,,Needs review
+Empire Upper Access,1,88.8,0.06,uncertain,,Needs review
+Runnel,1,85.7,0.05,uncertain,,Needs review
+Walk the Line,1,84.4,0.05,uncertain,,Needs review
+Deer Crest Connect,1,81.2,0.05,uncertain,,Needs review
+Elks to Barrel Roll,2,81.2,0.05,uncertain,,Needs review
+Empire Link Access,1,73.3,0.05,uncertain,,Needs review
+Riser,2,73.2,0.05,uncertain,,Needs review
+Stiff Upper Lip Access,2,72.2,0.04,uncertain,,Needs review
+Super G Connect,1,72.0,0.04,uncertain,,Needs review
+Silver Strike Trail,1,66.8,0.04,uncertain,,Needs review
+Fireswamp,1,66.7,0.04,uncertain,,Needs review
+Ontario Loop Cutoff,1,66.0,0.04,uncertain,,Needs review
+Loose Moose Connect,1,65.5,0.04,uncertain,,Needs review
+Bow Hunter Connect Road,1,63.9,0.04,uncertain,,Needs review
+Ability Way Connector,1,62.3,0.04,uncertain,,Needs review
+Deer Camp Cutoff,1,62.1,0.04,uncertain,,Needs review
+Naildriver (Lower),2,57.1,0.04,uncertain,,Needs review
+To Deer Camp,2,56.4,0.04,uncertain,,Needs review
+Round Valley Express / Ability Way Trail,1,53.8,0.03,uncertain,,Needs review
+Old Ranch Access,1,53.2,0.03,uncertain,,Needs review
+Bow Hunter Connect,1,52.8,0.03,uncertain,,Needs review
+Flagstaff,2,47.3,0.03,uncertain,,Needs review
+Elks Connect,1,42.5,0.03,uncertain,,Needs review
+Empire Pass Connector,1,32.9,0.02,uncertain,,Needs review
+Meadow Road / Thaynes Road,1,32.5,0.02,uncertain,,Needs review
+Gap to Deer Crest,1,19.1,0.01,uncertain,,Needs review
+CMG Access,1,18.4,0.01,uncertain,,Needs review
+Jenni's Trail lower,1,11.3,0.01,uncertain,,Needs review
