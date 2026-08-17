@@ -4,7 +4,7 @@ import osmnx as ox
 
 
 def main() -> None:
-    project_root = Path(__file__).resolve().parents[1]
+    project_root = Path(__file__).resolve().parents[2]
 
     input_path = (
         project_root

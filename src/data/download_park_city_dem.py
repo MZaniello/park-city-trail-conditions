@@ -5,7 +5,7 @@ import py3dep
 
 
 def main() -> None:
-    project_root = Path(__file__).resolve().parents[1]
+    project_root = Path(__file__).resolve().parents[2]
 
     trail_path = (
         project_root

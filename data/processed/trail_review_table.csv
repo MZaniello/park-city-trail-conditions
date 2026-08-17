@@ -10,7 +10,7 @@ Deer Valley Service,32,5029.8,3.13,service_route,no,Manually reviewed and exclud
 Jenni's Trail upper,11,5014.0,3.12,mountain_bike_trail,yes,Manually reviewed and confirmed
 Spiro Trail,9,4967.3,3.09,mountain_bike_trail,yes,Manually reviewed and confirmed
 Ripple Trail,22,4871.6,3.03,mountain_bike_trail,yes,Manually reviewed and confirmed
-Armstrong,2,4810.4,2.99,mountain_bike_trail,yes,Manually reviewed and confirmed
+Armstrong,2,4810.4,2.99,mountain_bike_trail,yes,"Confirmed trail, but OpenStreetMap geometry is incomplete"
 Flagstaff Loop,20,4600.2,2.86,mountain_bike_trail,yes,Manually reviewed and confirmed
 Tidal Wave,13,4299.6,2.67,mountain_bike_trail,yes,Manually reviewed and confirmed
 Cyn City,3,4211.6,2.62,mountain_bike_trail,yes,Manually reviewed and confirmed

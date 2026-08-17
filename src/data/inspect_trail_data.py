@@ -5,7 +5,7 @@ import pandas as pd
 
 
 def main() -> None:
-    project_root = Path(__file__).resolve().parents[1]
+    project_root = Path(__file__).resolve().parents[2]
 
     graph_path = (
         project_root

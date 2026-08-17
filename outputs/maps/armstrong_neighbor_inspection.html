@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9ae1e6cb548aae5fcb5796b74f918c4d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_9ae1e6cb548aae5fcb5796b74f918c4d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9ae1e6cb548aae5fcb5796b74f918c4d = L.map(
+                "map_9ae1e6cb548aae5fcb5796b74f918c4d",
+                {
+                    center: [40.65191595, -111.5230276],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 14,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ea23e85bedc71871f9839fe7d77a33a4 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ea23e85bedc71871f9839fe7d77a33a4.addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+            var poly_line_00578b32e03e44c766b29dc4789969ce = L.polyline(
+                [[40.658178199999995, -111.5140822], [40.658108000000006, -111.5142398], [40.6579973, -111.5145444]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_73fd49ac55dfffaade6ca4a004b4ed12 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_dbf1b0d3bd04b3b66d227fa5207b64eb = $(`<div id="html_dbf1b0d3bd04b3b66d227fa5207b64eb" style="width: 100.0%; height: 100.0%;">         <strong>Unnamed</strong><br>         Highway type: service<br>         Length: 43.9 meters<br>         OSM ID: 10161482         </div>`)[0];
+                popup_73fd49ac55dfffaade6ca4a004b4ed12.setContent(html_dbf1b0d3bd04b3b66d227fa5207b64eb);
+            
+        
+
+        poly_line_00578b32e03e44c766b29dc4789969ce.bindPopup(popup_73fd49ac55dfffaade6ca4a004b4ed12)
+        ;
+
+        
+    
+    
+            poly_line_00578b32e03e44c766b29dc4789969ce.bindTooltip(
+                `<div>
+                     Unnamed
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_d36ab715fd491bb6aeaf20dcc13d1620 = L.polyline(
+                [[40.659152, -111.5162004], [40.6589921, -111.5159453], [40.658706099999996, -111.5156456], [40.658585699999996, -111.5154523], [40.658228400000006, -111.514825], [40.6579973, -111.5145444]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_85237bcede0eda80c8f09563bcc7cf2e = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_ab3251451b20094709ea7f041fac74c3 = $(`<div id="html_ab3251451b20094709ea7f041fac74c3" style="width: 100.0%; height: 100.0%;">         <strong>Three Kings Drive</strong><br>         Highway type: residential<br>         Length: 190.7 meters<br>         OSM ID: 10162264         </div>`)[0];
+                popup_85237bcede0eda80c8f09563bcc7cf2e.setContent(html_ab3251451b20094709ea7f041fac74c3);
+            
+        
+
+        poly_line_d36ab715fd491bb6aeaf20dcc13d1620.bindPopup(popup_85237bcede0eda80c8f09563bcc7cf2e)
+        ;
+
+        
+    
+    
+            poly_line_d36ab715fd491bb6aeaf20dcc13d1620.bindTooltip(
+                `<div>
+                     Three Kings Drive
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_a1534bd2d43874a2954110d113beecc5 = L.polyline(
+                [[40.657526799999985, -111.5142932], [40.65776910000001, -111.5144057], [40.6579973, -111.5145444]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_0676bf60732d5a3f879864cb4e75a355 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_6d9ff93daaac657f908f046cca0a45ab = $(`<div id="html_6d9ff93daaac657f908f046cca0a45ab" style="width: 100.0%; height: 100.0%;">         <strong>Three Kings Drive</strong><br>         Highway type: residential<br>         Length: 56.5 meters<br>         OSM ID: 10162264         </div>`)[0];
+                popup_0676bf60732d5a3f879864cb4e75a355.setContent(html_6d9ff93daaac657f908f046cca0a45ab);
+            
+        
+
+        poly_line_a1534bd2d43874a2954110d113beecc5.bindPopup(popup_0676bf60732d5a3f879864cb4e75a355)
+        ;
+
+        
+    
+    
+            poly_line_a1534bd2d43874a2954110d113beecc5.bindTooltip(
+                `<div>
+                     Three Kings Drive
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_1a0b9ebab5acf25372636e9015501b63 = L.polyline(
+                [[40.65832, -111.514051], [40.6582352, -111.51405440000002], [40.658178199999995, -111.5140822]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_33b13540acd1aebe1db715820e2f444c = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_1c72c737d441c1c84721417da5009315 = $(`<div id="html_1c72c737d441c1c84721417da5009315" style="width: 100.0%; height: 100.0%;">         <strong>Unnamed</strong><br>         Highway type: service<br>         Length: 16.2 meters<br>         OSM ID: 10161482         </div>`)[0];
+                popup_33b13540acd1aebe1db715820e2f444c.setContent(html_1c72c737d441c1c84721417da5009315);
+            
+        
+
+        poly_line_1a0b9ebab5acf25372636e9015501b63.bindPopup(popup_33b13540acd1aebe1db715820e2f444c)
+        ;
+
+        
+    
+    
+            poly_line_1a0b9ebab5acf25372636e9015501b63.bindTooltip(
+                `<div>
+                     Unnamed
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_88219d957485e8c75cf5012dbcdb046e = L.polyline(
+                [[40.6578392, -111.5138186], [40.6579396, -111.5136972], [40.65801079999999, -111.5136869], [40.6580779, -111.513784], [40.658137499999995, -111.5138934], [40.6581649, -111.5139938], [40.658178199999995, -111.5140822]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_dd8d0ff40db82fe33cc4f88f8d8f749a = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_923ec170b88981c2ef81f599fc3239ea = $(`<div id="html_923ec170b88981c2ef81f599fc3239ea" style="width: 100.0%; height: 100.0%;">         <strong>Unnamed</strong><br>         Highway type: service<br>         Length: 62.2 meters<br>         OSM ID: 10161488         </div>`)[0];
+                popup_dd8d0ff40db82fe33cc4f88f8d8f749a.setContent(html_923ec170b88981c2ef81f599fc3239ea);
+            
+        
+
+        poly_line_88219d957485e8c75cf5012dbcdb046e.bindPopup(popup_dd8d0ff40db82fe33cc4f88f8d8f749a)
+        ;
+
+        
+    
+    
+            poly_line_88219d957485e8c75cf5012dbcdb046e.bindTooltip(
+                `<div>
+                     Unnamed
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_d51054511add94d6efe13597291f0a35 = L.polyline(
+                [[40.65832, -111.514051], [40.65845869999999, -111.5139268], [40.658511, -111.5137749]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_17064cb1361fae8f31b99542f9a699be = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_785defb33e0b955b2fdce374323063d0 = $(`<div id="html_785defb33e0b955b2fdce374323063d0" style="width: 100.0%; height: 100.0%;">         <strong>Unnamed</strong><br>         Highway type: service<br>         Length: 32.7 meters<br>         OSM ID: 10161482         </div>`)[0];
+                popup_17064cb1361fae8f31b99542f9a699be.setContent(html_785defb33e0b955b2fdce374323063d0);
+            
+        
+
+        poly_line_d51054511add94d6efe13597291f0a35.bindPopup(popup_17064cb1361fae8f31b99542f9a699be)
+        ;
+
+        
+    
+    
+            poly_line_d51054511add94d6efe13597291f0a35.bindTooltip(
+                `<div>
+                     Unnamed
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_d79191cddb3add0835583035579b9e33 = L.polyline(
+                [[40.65832, -111.514051], [40.65834850000001, -111.5141321], [40.6585161, -111.514372]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_bcad12acfc03058fc82fbd4bf034792e = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_aea2a1506a3e257fdb1498091ab56aea = $(`<div id="html_aea2a1506a3e257fdb1498091ab56aea" style="width: 100.0%; height: 100.0%;">         <strong>Unnamed</strong><br>         Highway type: service<br>         Length: 35.0 meters<br>         OSM ID: 1344398800         </div>`)[0];
+                popup_bcad12acfc03058fc82fbd4bf034792e.setContent(html_aea2a1506a3e257fdb1498091ab56aea);
+            
+        
+
+        poly_line_d79191cddb3add0835583035579b9e33.bindPopup(popup_bcad12acfc03058fc82fbd4bf034792e)
+        ;
+
+        
+    
+    
+            poly_line_d79191cddb3add0835583035579b9e33.bindTooltip(
+                `<div>
+                     Unnamed
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_533c13f98871ed2476a894648a1329a6 = L.polyline(
+                [[40.65987620000001, -111.5170169], [40.65982739999999, -111.5171372], [40.659805299999995, -111.5173724], [40.6597537, -111.5174587], [40.6597025, -111.5174939], [40.6596205, -111.5174903], [40.6594407, -111.5173758]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_dd1b887feef636f715ef85ba15219435 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_eeba7829e35a6261572a5857804816d6 = $(`<div id="html_eeba7829e35a6261572a5857804816d6" style="width: 100.0%; height: 100.0%;">         <strong>Sprial Tunnel Road</strong><br>         Highway type: residential<br>         Length: 78.5 meters<br>         OSM ID: 10162220         </div>`)[0];
+                popup_dd1b887feef636f715ef85ba15219435.setContent(html_eeba7829e35a6261572a5857804816d6);
+            
+        
+
+        poly_line_533c13f98871ed2476a894648a1329a6.bindPopup(popup_dd1b887feef636f715ef85ba15219435)
+        ;
+
+        
+    
+    
+            poly_line_533c13f98871ed2476a894648a1329a6.bindTooltip(
+                `<div>
+                     Sprial Tunnel Road
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_2728bc5b5bec4a4b6c49cd0393bcd292 = L.polyline(
+                [[40.65893630000001, -111.519056], [40.658940900000005, -111.51901], [40.658922999999994, -111.5189543], [40.6588771, -111.5188836], [40.6588414, -111.5188246], [40.6588026, -111.5187343], [40.65877399999999, -111.5186133], [40.6587746, -111.5185018], [40.658799699999996, -111.5184146], [40.65885209999999, -111.5183541], [40.658926, -111.51832970000001], [40.659009399999995, -111.5183714], [40.65908149999999, -111.518468], [40.65914469999999, -111.5186133], [40.65922520000001, -111.5187736], [40.6592716, -111.5188333], [40.659339, -111.518882], [40.65940099999999, -111.5189008], [40.659451600000004, -111.5188867], [40.6594993, -111.5188474], [40.6595149, -111.5188094], [40.65953149999999, -111.5187689], [40.659547, -111.5187037], [40.65953499999999, -111.5185686], [40.6594903, -111.51843740000001], [40.6594325, -111.5182857], [40.65939800000001, -111.5181538], [40.65937060000001, -111.5180029], [40.6593563, -111.51782540000002], [40.659370599999995, -111.5175473], [40.6594021, -111.5174452], [40.6594407, -111.5173758]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_289def3164b8be1d963a75d0f998f5c3 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_2487b25565fd37fe7ac7dfc940d7f078 = $(`<div id="html_2487b25565fd37fe7ac7dfc940d7f078" style="width: 100.0%; height: 100.0%;">         <strong>Silver Star Court</strong><br>         Highway type: residential<br>         Length: 293.9 meters<br>         OSM ID: 257696845         </div>`)[0];
+                popup_289def3164b8be1d963a75d0f998f5c3.setContent(html_2487b25565fd37fe7ac7dfc940d7f078);
+            
+        
+
+        poly_line_2728bc5b5bec4a4b6c49cd0393bcd292.bindPopup(popup_289def3164b8be1d963a75d0f998f5c3)
+        ;
+
+        
+    
+    
+            poly_line_2728bc5b5bec4a4b6c49cd0393bcd292.bindTooltip(
+                `<div>
+                     Silver Star Court
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_b08b824903154a1732c721d25483595e = L.polyline(
+                [[40.658243299999995, -111.5157543], [40.65842839999999, -111.5159583], [40.658637999999996, -111.5162317], [40.65875199999999, -111.5164302], [40.658918799999995, -111.5167145], [40.65917519999999, -111.5169988], [40.659321699999985, -111.517267], [40.6594407, -111.5173758]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_11cde24191932f1d6cad18349ce8c8f0 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_628dfe24b7d0c5a61ae29402e5679a3b = $(`<div id="html_628dfe24b7d0c5a61ae29402e5679a3b" style="width: 100.0%; height: 100.0%;">         <strong>Silver Star Drive</strong><br>         Highway type: path / residential<br>         Length: 192.2 meters<br>         OSM ID: [963605648, 963674683]         </div>`)[0];
+                popup_11cde24191932f1d6cad18349ce8c8f0.setContent(html_628dfe24b7d0c5a61ae29402e5679a3b);
+            
+        
+
+        poly_line_b08b824903154a1732c721d25483595e.bindPopup(popup_11cde24191932f1d6cad18349ce8c8f0)
+        ;
+
+        
+    
+    
+            poly_line_b08b824903154a1732c721d25483595e.bindTooltip(
+                `<div>
+                     Silver Star Drive
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_605731853dc918d7c5abe9e4fd8bd338 = L.polyline(
+                [[40.660679, -111.5172385], [40.6602552, -111.5171942], [40.66017109999999, -111.5171614], [40.6600241, -111.517104], [40.65987620000001, -111.5170169]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_b176384afbba3b1a430365a3f6dbe12d = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_aa6665b0e6eb0627d675bacc229e3e1b = $(`<div id="html_aa6665b0e6eb0627d675bacc229e3e1b" style="width: 100.0%; height: 100.0%;">         <strong>Three Kings Drive</strong><br>         Highway type: residential<br>         Length: 92.1 meters<br>         OSM ID: 10162264         </div>`)[0];
+                popup_b176384afbba3b1a430365a3f6dbe12d.setContent(html_aa6665b0e6eb0627d675bacc229e3e1b);
+            
+        
+
+        poly_line_605731853dc918d7c5abe9e4fd8bd338.bindPopup(popup_b176384afbba3b1a430365a3f6dbe12d)
+        ;
+
+        
+    
+    
+            poly_line_605731853dc918d7c5abe9e4fd8bd338.bindTooltip(
+                `<div>
+                     Three Kings Drive
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_3dc9be4e87749db9da62d2ccca8249b9 = L.polyline(
+                [[40.659152, -111.5162004], [40.65934970000001, -111.5165216], [40.6595085, -111.5167085], [40.65987620000001, -111.5170169]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_0afb3af49a1009a44c50339302d7bb51 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_bdb52c9f8f3853b137febc9f15db6944 = $(`<div id="html_bdb52c9f8f3853b137febc9f15db6944" style="width: 100.0%; height: 100.0%;">         <strong>Three Kings Drive</strong><br>         Highway type: residential<br>         Length: 107.0 meters<br>         OSM ID: 10162264         </div>`)[0];
+                popup_0afb3af49a1009a44c50339302d7bb51.setContent(html_bdb52c9f8f3853b137febc9f15db6944);
+            
+        
+
+        poly_line_3dc9be4e87749db9da62d2ccca8249b9.bindPopup(popup_0afb3af49a1009a44c50339302d7bb51)
+        ;
+
+        
+    
+    
+            poly_line_3dc9be4e87749db9da62d2ccca8249b9.bindTooltip(
+                `<div>
+                     Three Kings Drive
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_13592098461730a5e8e2a1ca870fbcca = L.polyline(
+                [[40.6563547, -111.5136333], [40.6560449, -111.51321210000002], [40.6559152, -111.5129747], [40.655839099999994, -111.5127491], [40.6557826, -111.5124236], [40.6557591, -111.512219], [40.6557598, -111.51203630000002], [40.65579300000001, -111.511302], [40.6557967, -111.5111743], [40.65577809999999, -111.51102680000001]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_75d09543c74d9f667b5522f8d034b25f = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_4107edb8819189ea76526a0e7a5449f3 = $(`<div id="html_4107edb8819189ea76526a0e7a5449f3" style="width: 100.0%; height: 100.0%;">         <strong>Three Kings Drive</strong><br>         Highway type: residential<br>         Length: 241.5 meters<br>         OSM ID: 10162264         </div>`)[0];
+                popup_75d09543c74d9f667b5522f8d034b25f.setContent(html_4107edb8819189ea76526a0e7a5449f3);
+            
+        
+
+        poly_line_13592098461730a5e8e2a1ca870fbcca.bindPopup(popup_75d09543c74d9f667b5522f8d034b25f)
+        ;
+
+        
+    
+    
+            poly_line_13592098461730a5e8e2a1ca870fbcca.bindTooltip(
+                `<div>
+                     Three Kings Drive
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_aeec8baacb1d547eebd57b1a6c5aaedb = L.polyline(
+                [[40.6572906, -111.5141758], [40.65659209999998, -111.5138288], [40.6563547, -111.5136333]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_c7468ddc3d546e66b4bb7ed7600dfedd = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_fb8663a9173c2432ae3e4072eb023fb4 = $(`<div id="html_fb8663a9173c2432ae3e4072eb023fb4" style="width: 100.0%; height: 100.0%;">         <strong>Three Kings Drive</strong><br>         Highway type: residential<br>         Length: 114.1 meters<br>         OSM ID: 10162264         </div>`)[0];
+                popup_c7468ddc3d546e66b4bb7ed7600dfedd.setContent(html_fb8663a9173c2432ae3e4072eb023fb4);
+            
+        
+
+        poly_line_aeec8baacb1d547eebd57b1a6c5aaedb.bindPopup(popup_c7468ddc3d546e66b4bb7ed7600dfedd)
+        ;
+
+        
+    
+    
+            poly_line_aeec8baacb1d547eebd57b1a6c5aaedb.bindTooltip(
+                `<div>
+                     Three Kings Drive
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_47a348c8445544201a84be1783f43a10 = L.polyline(
+                [[40.6565364, -111.5148011], [40.6566164, -111.5147533], [40.65668189999999, -111.5146708], [40.6567091, -111.5145482], [40.6567031, -111.514432], [40.6566714, -111.5143374], [40.6565783, -111.5142683], [40.656398, -111.5142201], [40.65629439999999, -111.5141089], [40.6562556, -111.5140029], [40.656251899999994, -111.5138662], [40.6562885, -111.5137564], [40.6563547, -111.5136333]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_d22826ea4c4255e80b2389632b9eef2b = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_9ee2bf506db0f7ef4a62f28eba346c94 = $(`<div id="html_9ee2bf506db0f7ef4a62f28eba346c94" style="width: 100.0%; height: 100.0%;">         <strong>Crescent Ridge Road</strong><br>         Highway type: residential<br>         Length: 140.7 meters<br>         OSM ID: 10162579         </div>`)[0];
+                popup_d22826ea4c4255e80b2389632b9eef2b.setContent(html_9ee2bf506db0f7ef4a62f28eba346c94);
+            
+        
+
+        poly_line_47a348c8445544201a84be1783f43a10.bindPopup(popup_d22826ea4c4255e80b2389632b9eef2b)
+        ;
+
+        
+    
+    
+            poly_line_47a348c8445544201a84be1783f43a10.bindTooltip(
+                `<div>
+                     Crescent Ridge Road
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_412bf54a88276381ca95339371d6d354 = L.polyline(
+                [[40.65957250000001, -111.5157457], [40.6593376, -111.5160198], [40.659152, -111.5162004]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_6d8f80f9950be4ddbf8644fd6746abec = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_4d634434c13679e3cff65a34a8d3648e = $(`<div id="html_4d634434c13679e3cff65a34a8d3648e" style="width: 100.0%; height: 100.0%;">         <strong>Unnamed</strong><br>         Highway type: service<br>         Length: 60.5 meters<br>         OSM ID: 808248519         </div>`)[0];
+                popup_6d8f80f9950be4ddbf8644fd6746abec.setContent(html_4d634434c13679e3cff65a34a8d3648e);
+            
+        
+
+        poly_line_412bf54a88276381ca95339371d6d354.bindPopup(popup_6d8f80f9950be4ddbf8644fd6746abec)
+        ;
+
+        
+    
+    
+            poly_line_412bf54a88276381ca95339371d6d354.bindTooltip(
+                `<div>
+                     Unnamed
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_cfb65d5368974a52ddd67bf705cf1f2c = L.polyline(
+                [[40.6526107, -111.51169550000002], [40.6529347, -111.5118823], [40.6530771, -111.51198480000001], [40.653305, -111.5123281], [40.65342219999999, -111.5124826], [40.653573400000006, -111.5126628], [40.653819600000006, -111.5127969], [40.65396810000001, -111.51288], [40.65401899999999, -111.51297660000002], [40.65409840000001, -111.5131322], [40.654196000000006, -111.5133494], [40.654281499999996, -111.5134487], [40.65442189999999, -111.513513], [40.654592799999996, -111.5135211], [40.65482279999999, -111.513513], [40.6550812, -111.5135318], [40.65524400000001, -111.5136015], [40.6555126, -111.5137115], [40.6556937, -111.5138912], [40.65578930000001, -111.5141273], [40.6558362, -111.51433650000001], [40.6558821, -111.514422], [40.656082299999994, -111.5145671], [40.656267500000006, -111.5146905], [40.6564175, -111.5147914], [40.6564984, -111.5148075], [40.6565364, -111.5148011]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_a9c4ca463ca19f86dd85e2f8fc982299 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_4eb161304db73b64ab6989c17e7bd981 = $(`<div id="html_4eb161304db73b64ab6989c17e7bd981" style="width: 100.0%; height: 100.0%;">         <strong>Crescent Road / Crescent Ridge Road</strong><br>         Highway type: path / residential<br>         Length: 540.0 meters<br>         OSM ID: [10162579, 1103646551]         </div>`)[0];
+                popup_a9c4ca463ca19f86dd85e2f8fc982299.setContent(html_4eb161304db73b64ab6989c17e7bd981);
+            
+        
+
+        poly_line_cfb65d5368974a52ddd67bf705cf1f2c.bindPopup(popup_a9c4ca463ca19f86dd85e2f8fc982299)
+        ;
+
+        
+    
+    
+            poly_line_cfb65d5368974a52ddd67bf705cf1f2c.bindTooltip(
+                `<div>
+                     Crescent Road / Crescent Ridge Road
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_6ee401146d996ce9ab297d653a735c61 = L.polyline(
+                [[40.658243299999995, -111.5157543], [40.6579634, -111.5156832], [40.6578068, -111.5156676], [40.65759500000001, -111.5155906], [40.65693600000001, -111.5153867], [40.6567558, -111.515242], [40.6566614, -111.5151507], [40.6565664, -111.514934], [40.6565364, -111.5148011]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_4b41f7b6e629e43c57e00262b2ca59ec = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_075bce194d2d2c137ecb3c9ca42add98 = $(`<div id="html_075bce194d2d2c137ecb3c9ca42add98" style="width: 100.0%; height: 100.0%;">         <strong>Unnamed</strong><br>         Highway type: service<br>         Length: 218.1 meters<br>         OSM ID: 358641205         </div>`)[0];
+                popup_4b41f7b6e629e43c57e00262b2ca59ec.setContent(html_075bce194d2d2c137ecb3c9ca42add98);
+            
+        
+
+        poly_line_6ee401146d996ce9ab297d653a735c61.bindPopup(popup_4b41f7b6e629e43c57e00262b2ca59ec)
+        ;
+
+        
+    
+    
+            poly_line_6ee401146d996ce9ab297d653a735c61.bindTooltip(
+                `<div>
+                     Unnamed
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_7b76d0399f8fa55681298c1d8482ffc8 = L.polyline(
+                [[40.65215400000001, -111.512447], [40.65219339999999, -111.5125132], [40.652230499999995, -111.5125976], [40.65225689999999, -111.51265190000001], [40.6522779, -111.5126947], [40.65230689999999, -111.5127286], [40.6523208, -111.5127322], [40.652522999999995, -111.51279340000002], [40.6525627, -111.5128079], [40.652587999999994, -111.5128505], [40.65260380000001, -111.5128932], [40.652601699999984, -111.5129426], [40.652576999999994, -111.513258], [40.652584999999995, -111.513361], [40.65263, -111.513438], [40.652675, -111.513468], [40.65277900000001, -111.51348900000002], [40.653116999999995, -111.513518], [40.653216, -111.513562], [40.653328, -111.51369], [40.65345000000001, -111.513991], [40.65351199999999, -111.514069], [40.65378700000001, -111.514283], [40.653844, -111.514314], [40.65391199999999, -111.514323], [40.65402499999998, -111.5143], [40.654128, -111.514315], [40.65432999999999, -111.51440200000002], [40.654635000000006, -111.514468], [40.654707, -111.514507], [40.654976000000005, -111.514849], [40.6551322, -111.5149849]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_be2c55baea4483968f80851045d2c96b = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_9260227ea1c877683799b7f2520d7573 = $(`<div id="html_9260227ea1c877683799b7f2520d7573" style="width: 100.0%; height: 100.0%;">         <strong>Silver Spur</strong><br>         Highway type: path<br>         Length: 439.6 meters<br>         OSM ID: 240427892         </div>`)[0];
+                popup_be2c55baea4483968f80851045d2c96b.setContent(html_9260227ea1c877683799b7f2520d7573);
+            
+        
+
+        poly_line_7b76d0399f8fa55681298c1d8482ffc8.bindPopup(popup_be2c55baea4483968f80851045d2c96b)
+        ;
+
+        
+    
+    
+            poly_line_7b76d0399f8fa55681298c1d8482ffc8.bindTooltip(
+                `<div>
+                     Silver Spur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_836e808177fc71bec102d133bf4673c5 = L.polyline(
+                [[40.652437, -111.519146], [40.652457999999996, -111.518941], [40.65252600000001, -111.51864], [40.652554, -111.518397], [40.652617000000006, -111.518109], [40.652613, -111.517981], [40.652566, -111.517796], [40.652239999999985, -111.517119], [40.652210999999994, -111.517028], [40.6521388, -111.5168809], [40.652395199999994, -111.5170579], [40.652448, -111.516901], [40.652519000000005, -111.51691200000002], [40.652602, -111.517029], [40.65266379999999, -111.5171383], [40.6531462, -111.5178414], [40.65325149999999, -111.51827350000002], [40.65330659999999, -111.5188549], [40.653416899999996, -111.5180009], [40.653234000000005, -111.517231], [40.65326799999999, -111.516682], [40.65324300000002, -111.516548], [40.653171, -111.516375], [40.652958999999996, -111.516125], [40.65287299999999, -111.516068], [40.65274200000001, -111.51604600000002], [40.65249, -111.51604600000002], [40.652411, -111.516028], [40.652325, -111.515974], [40.652262, -111.515894], [40.652136, -111.515572], [40.652041000000004, -111.515387], [40.651864999999994, -111.515147], [40.651735900000006, -111.51501400000001], [40.65191399999999, -111.515067], [40.65206100000001, -111.51514], [40.65217799999999, -111.515247], [40.652257, -111.515347], [40.65230600000001, -111.51538], [40.6523667, -111.51555050000002], [40.65251730000001, -111.5156256], [40.65265569999999, -111.5155827], [40.652395, -111.515312], [40.652398999999996, -111.51523100000001], [40.652345999999994, -111.514927], [40.652304, -111.5148], [40.652187999999995, -111.51458000000001], [40.65205499999999, -111.514428], [40.651963800000004, -111.51433810000002], [40.652109, -111.514316], [40.65244799999999, -111.5144], [40.652546, -111.514455], [40.65258999999998, -111.514507], [40.652664, -111.514666], [40.65271499999999, -111.514725], [40.652781, -111.51475000000002], [40.65303599999999, -111.514763], [40.653158, -111.514732], [40.653268999999995, -111.51473], [40.65373000000001, -111.514842], [40.654039, -111.514801], [40.654347, -111.51484400000001], [40.654489, -111.514899], [40.654591999999994, -111.514986], [40.65468099999999, -111.515129], [40.65473299999999, -111.515284], [40.654794, -111.515355], [40.654869, -111.515325], [40.65492100000001, -111.515344], [40.654949, -111.515442], [40.65498199999998, -111.5155], [40.65504599999999, -111.515481], [40.65508799999999, -111.515422], [40.65512799999999, -111.51532], [40.65514300000002, -111.515135], [40.6551322, -111.5149849]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_c3e1cd63890314aa6e621f525d19d910 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_cf883088f85f211f43119e778f2cb0d5 = $(`<div id="html_cf883088f85f211f43119e778f2cb0d5" style="width: 100.0%; height: 100.0%;">         <strong>Spiro Trail</strong><br>         Highway type: path<br>         Length: 1569.8 meters<br>         OSM ID: [358641204, 1298662541]         </div>`)[0];
+                popup_c3e1cd63890314aa6e621f525d19d910.setContent(html_cf883088f85f211f43119e778f2cb0d5);
+            
+        
+
+        poly_line_836e808177fc71bec102d133bf4673c5.bindPopup(popup_c3e1cd63890314aa6e621f525d19d910)
+        ;
+
+        
+    
+    
+            poly_line_836e808177fc71bec102d133bf4673c5.bindTooltip(
+                `<div>
+                     Spiro Trail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_d4ff0db927650b7237a1dc57c66aa513 = L.polyline(
+                [[40.65639379999999, -111.51539900000002], [40.656094499999995, -111.5151304], [40.65600010000001, -111.515078], [40.6558585, -111.5150017], [40.655773, -111.51496140000002], [40.6556499, -111.5149315], [40.655627999999986, -111.514966], [40.655589, -111.514984], [40.655528999999994, -111.51495], [40.655423, -111.514818], [40.65536, -111.514783], [40.65530799999999, -111.514775], [40.655189, -111.51481], [40.655148999999994, -111.514862], [40.6551322, -111.5149849]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_bbd8ee91be697499f6b51e2e9696a162 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_232ef7d8efc5bb69f584fb16717bda97 = $(`<div id="html_232ef7d8efc5bb69f584fb16717bda97" style="width: 100.0%; height: 100.0%;">         <strong>Spiro Trail</strong><br>         Highway type: path<br>         Length: 168.3 meters<br>         OSM ID: 358641204         </div>`)[0];
+                popup_bbd8ee91be697499f6b51e2e9696a162.setContent(html_232ef7d8efc5bb69f584fb16717bda97);
+            
+        
+
+        poly_line_d4ff0db927650b7237a1dc57c66aa513.bindPopup(popup_bbd8ee91be697499f6b51e2e9696a162)
+        ;
+
+        
+    
+    
+            poly_line_d4ff0db927650b7237a1dc57c66aa513.bindTooltip(
+                `<div>
+                     Spiro Trail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_cf14b0c6cbfde436ff6950d3a2e19a17 = L.polyline(
+                [[40.6483054, -111.53221740000001], [40.64834019999999, -111.5320229], [40.6483578, -111.5319702], [40.64836519999999, -111.5319259], [40.648352599999996, -111.5318957], [40.648325899999996, -111.5318913], [40.648116099999996, -111.5320264], [40.647955499999995, -111.5321333], [40.6478152, -111.5322161], [40.6475245, -111.5324974], [40.647211600000006, -111.5328032], [40.6467848, -111.5330844], [40.6467025, -111.5331748], [40.64659830000001, -111.5332149], [40.6465104, -111.53327190000002], [40.64643439999999, -111.5334117], [40.64622339999998, -111.5336296], [40.646133999999996, -111.5337322], [40.646108100000006, -111.5337609], [40.646087699999995, -111.5337737], [40.6460736, -111.5337652], [40.6460612, -111.533747], [40.6460633, -111.533649], [40.6460328, -111.5334728], [40.6459616, -111.5331514], [40.64593119999999, -111.5326692], [40.6459088, -111.5322561], [40.645892100000005, -111.5321623], [40.64587529999999, -111.5321168], [40.6458337, -111.53210090000002], [40.6457666, -111.5320851], [40.64530109999999, -111.532057], [40.6446507, -111.5321067], [40.64395970000001, -111.5320264], [40.643565599999995, -111.5318965], [40.64348350000001, -111.5318813], [40.6434478, -111.5318775], [40.6434258, -111.53186620000001], [40.6434097, -111.5318472], [40.6434027, -111.5318229], [40.64338289999999, -111.5318081], [40.64335779999999, -111.5318034], [40.6433285, -111.5317986], [40.64326109999999, -111.53175890000001], [40.64317539999999, -111.5316971], [40.6431529, -111.5316595], [40.643155900000004, -111.5316353], [40.6431672, -111.5316185], [40.6431938, -111.5315953], [40.64325079999999, -111.5315614], [40.643367199999986, -111.531509], [40.643429100000006, -111.5314755], [40.643551, -111.5313576], [40.6435744, -111.5313142], [40.643592600000005, -111.5312499]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_66d9688cd28f57bb174a844a9626e217 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_cb5a7ac58664d0a8ae018e31cf473f45 = $(`<div id="html_cb5a7ac58664d0a8ae018e31cf473f45" style="width: 100.0%; height: 100.0%;">         <strong>H.A.M.</strong><br>         Highway type: path<br>         Length: 847.2 meters<br>         OSM ID: 518591517         </div>`)[0];
+                popup_66d9688cd28f57bb174a844a9626e217.setContent(html_cb5a7ac58664d0a8ae018e31cf473f45);
+            
+        
+
+        poly_line_cf14b0c6cbfde436ff6950d3a2e19a17.bindPopup(popup_66d9688cd28f57bb174a844a9626e217)
+        ;
+
+        
+    
+    
+            poly_line_cf14b0c6cbfde436ff6950d3a2e19a17.bindTooltip(
+                `<div>
+                     H.A.M.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_e5b9a0c274eaba3d15f95c7f40611245 = L.polyline(
+                [[40.65893630000001, -111.519056], [40.6589209, -111.519105], [40.65893630000001, -111.519154], [40.658973499999995, -111.51917440000001], [40.6590107, -111.519154], [40.659026100000005, -111.519105], [40.659010699999996, -111.519056], [40.65897350000001, -111.5190356], [40.65893630000001, -111.519056]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_fb42de1081c41bca1c359c0b1ce4af1f = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_efb6724a22577cbdc8ff94dff1beba56 = $(`<div id="html_efb6724a22577cbdc8ff94dff1beba56" style="width: 100.0%; height: 100.0%;">         <strong>Silver Star Court</strong><br>         Highway type: residential<br>         Length: 35.8 meters<br>         OSM ID: 257696846         </div>`)[0];
+                popup_fb42de1081c41bca1c359c0b1ce4af1f.setContent(html_efb6724a22577cbdc8ff94dff1beba56);
+            
+        
+
+        poly_line_e5b9a0c274eaba3d15f95c7f40611245.bindPopup(popup_fb42de1081c41bca1c359c0b1ce4af1f)
+        ;
+
+        
+    
+    
+            poly_line_e5b9a0c274eaba3d15f95c7f40611245.bindTooltip(
+                `<div>
+                     Silver Star Court
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_9026b0a3d565f6c484e04cfe257a6dc6 = L.polyline(
+                [[40.658243299999995, -111.5157543], [40.6581212, -111.515802], [40.65796659999999, -111.5158017], [40.65759539999999, -111.5156812], [40.657315, -111.5156415], [40.65701829999999, -111.5155944], [40.656782799999995, -111.5155388], [40.65656659999999, -111.5154449], [40.65639379999999, -111.51539900000002]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_fec696ba776efe782f18ae73380a87f9 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_8ea66a5270f12477fa223c2364950190 = $(`<div id="html_8ea66a5270f12477fa223c2364950190" style="width: 100.0%; height: 100.0%;">         <strong>Silver Star Access</strong><br>         Highway type: path<br>         Length: 210.0 meters<br>         OSM ID: 1103646550         </div>`)[0];
+                popup_fec696ba776efe782f18ae73380a87f9.setContent(html_8ea66a5270f12477fa223c2364950190);
+            
+        
+
+        poly_line_9026b0a3d565f6c484e04cfe257a6dc6.bindPopup(popup_fec696ba776efe782f18ae73380a87f9)
+        ;
+
+        
+    
+    
+            poly_line_9026b0a3d565f6c484e04cfe257a6dc6.bindTooltip(
+                `<div>
+                     Silver Star Access
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_6af38c0ac37d263652810fb0aee1e82b = L.polyline(
+                [[40.650481, -111.5289712], [40.65078760000001, -111.5289961], [40.65108669999999, -111.5290015], [40.6514734, -111.5291383], [40.6517908, -111.5292885], [40.6522955, -111.5291892], [40.6520086, -111.5290095], [40.6518559, -111.5288486], [40.651450999999994, -111.52835240000002], [40.65115190000001, -111.5281298], [40.6513513, -111.5281405], [40.6517461, -111.5282022], [40.65188439999999, -111.528288], [40.6520187, -111.5283497], [40.6520798, -111.52831220000002], [40.6520513, -111.5282022], [40.651744, -111.5279474], [40.6515584, -111.5278166], [40.651782, -111.527725], [40.65180499999999, -111.527561], [40.651811000000016, -111.5275439], [40.651838000000005, -111.527467], [40.651884, -111.527396], [40.6519588, -111.5273158], [40.652079, -111.52718700000001], [40.652171100000004, -111.5270212], [40.652237199999995, -111.5268047], [40.6522769, -111.5266982], [40.65232069999999, -111.5266278], [40.65235719999999, -111.52659950000002], [40.653314, -111.526651], [40.65340119999998, -111.5266612], [40.653482200000006, -111.5266767], [40.6535222, -111.5266783], [40.653555099999984, -111.5266744], [40.653589999999994, -111.526676], [40.6537575, -111.5267066], [40.6537805, -111.5267211], [40.65381849999999, -111.5267527], [40.6539167, -111.5267838], [40.653983, -111.526787], [40.654143, -111.526804], [40.654419999999995, -111.526732], [40.65478299999999, -111.526679], [40.65498, -111.52666900000001], [40.655066999999995, -111.526639], [40.65513899999999, -111.526574], [40.65516999999999, -111.526519], [40.655232, -111.526254], [40.655272999999994, -111.526151], [40.655374, -111.526021], [40.65561699999998, -111.525802], [40.655733000000005, -111.525743], [40.65582, -111.525738], [40.655975999999995, -111.525778], [40.65623819999999, -111.52580420000001], [40.6563204, -111.5257996], [40.6563688, -111.5257798], [40.6564126, -111.5257539], [40.656504600000005, -111.5256951], [40.6565721, -111.5256378], [40.6566744, -111.52557880000002], [40.6567153, -111.5255408], [40.656734, -111.525499], [40.65684100000001, -111.525224], [40.656893, -111.525074], [40.656913, -111.524959], [40.656905, -111.524819], [40.656851, -111.524672], [40.65678, -111.524566], [40.656661, -111.524435], [40.65662499999999, -111.52437000000002], [40.65661399999999, -111.524286], [40.65667200000001, -111.524135], [40.65674999999999, -111.524023], [40.656835, -111.523937], [40.65689199999999, -111.523905], [40.657179, -111.52383], [40.657497000000006, -111.52367400000001], [40.657807, -111.523425], [40.65789600000001, -111.523295], [40.65794499999999, -111.523184], [40.658038999999995, -111.522782], [40.658144, -111.522471], [40.658338, -111.522036], [40.658499000000006, -111.521753], [40.65862800000001, -111.521442], [40.658654, -111.521354], [40.65869, -111.521075], [40.65873899999998, -111.520875], [40.65877, -111.520643], [40.658773999999994, -111.5204556], [40.6587581, -111.5204086], [40.6587214, -111.5203598], [40.6586283, -111.5203246], [40.65843000000001, -111.520217], [40.657845, -111.520059], [40.657786, -111.520007], [40.657737, -111.519926], [40.65770229999999, -111.5197994], [40.657677, -111.519671], [40.65767600000001, -111.519579], [40.657678, -111.5195194], [40.657701, -111.5194659], [40.657733, -111.519399], [40.6578857, -111.5191866], [40.657923399999994, -111.519105], [40.657980900000005, -111.51899640000002], [40.65804999999999, -111.518894], [40.658080999999996, -111.51882520000001], [40.65811049999999, -111.5187677], [40.65812650000001, -111.5187096], [40.6581496, -111.5186652], [40.6581705, -111.51863], [40.6581998, -111.5185787], [40.65823499999999, -111.518516], [40.65830099999999, -111.51821400000001], [40.65831899999999, -111.518063], [40.65831300000001, -111.517852], [40.658293, -111.51775], [40.658264, -111.517678], [40.658207999999995, -111.517608], [40.658058, -111.517484], [40.657931999999995, -111.517317], [40.65787799999998, -111.5172], [40.65782099999999, -111.516991], [40.65778, -111.516777], [40.657684399999994, -111.5163875], [40.657633800000006, -111.5162592], [40.6575483, -111.5161269], [40.65749310000001, -111.5160486], [40.6574269, -111.5159986], [40.6573572, -111.5159532], [40.657240099999996, -111.5158954], [40.65653700000001, -111.51552800000002], [40.65647799999999, -111.515475], [40.65639379999999, -111.51539900000002]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_f0de6e9841df2b0860eacb891efa6cb1 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_6dfcd6e34e033d54d85936941e0d3dfc = $(`<div id="html_6dfcd6e34e033d54d85936941e0d3dfc" style="width: 100.0%; height: 100.0%;">         <strong>Armstrong</strong><br>         Highway type: path<br>         Length: 2417.7 meters<br>         OSM ID: [1144841745, 301715486]         </div>`)[0];
+                popup_f0de6e9841df2b0860eacb891efa6cb1.setContent(html_6dfcd6e34e033d54d85936941e0d3dfc);
+            
+        
+
+        poly_line_6af38c0ac37d263652810fb0aee1e82b.bindPopup(popup_f0de6e9841df2b0860eacb891efa6cb1)
+        ;
+
+        
+    
+    
+            poly_line_6af38c0ac37d263652810fb0aee1e82b.bindTooltip(
+                `<div>
+                     Armstrong
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_99a9c569556251b699e1ffc459e969b6 = L.polyline(
+                [[40.6439504, -111.5310399], [40.6440708, -111.53097370000002], [40.644083, -111.530967], [40.6447893, -111.5305841], [40.64529619999999, -111.5302922], [40.64589399999999, -111.5301055], [40.646054599999985, -111.5299838], [40.64624779999999, -111.5298191], [40.64635109999999, -111.5297275], [40.6465876, -111.5295312], [40.6469035, -111.5293108], [40.647177500000005, -111.5291264], [40.6474165, -111.5289759], [40.6474609, -111.528911], [40.647528699999995, -111.52876], [40.6475641, -111.5286597], [40.6476027, -111.5285729], [40.6476821, -111.5283969], [40.6478856, -111.5280214], [40.6481135, -111.5277478], [40.648353699999994, -111.5274742], [40.6485875, -111.5272268], [40.6488512, -111.5268747], [40.649009899999996, -111.5266488], [40.649130099999994, -111.5264622], [40.6492117, -111.52629610000001], [40.6492411, -111.5260781], [40.64917909999999, -111.5259414], [40.6489967, -111.5258274], [40.64883669999998, -111.525759], [40.6486315, -111.5256276], [40.6485379, -111.5255833], [40.64846390000001, -111.525572], [40.6483703, -111.5255834], [40.64804769999999, -111.5256389], [40.6478793, -111.5256851], [40.6477087, -111.5257498], [40.6473253, -111.5258792], [40.64700969999999, -111.5259901], [40.6467269, -111.5261318], [40.64639259999999, -111.5263229], [40.646243, -111.5264061], [40.6461541, -111.52644920000002], [40.64586099999999, -111.52653800000002]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_410ba17801903b568527d6a69bc10af5 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_77312839e2bd80377d01bbba84ee26b6 = $(`<div id="html_77312839e2bd80377d01bbba84ee26b6" style="width: 100.0%; height: 100.0%;">         <strong>Unnamed</strong><br>         Highway type: track<br>         Length: 1149.4 meters<br>         OSM ID: [10158576, 1103583258]         </div>`)[0];
+                popup_410ba17801903b568527d6a69bc10af5.setContent(html_77312839e2bd80377d01bbba84ee26b6);
+            
+        
+
+        poly_line_99a9c569556251b699e1ffc459e969b6.bindPopup(popup_410ba17801903b568527d6a69bc10af5)
+        ;
+
+        
+    
+    
+            poly_line_99a9c569556251b699e1ffc459e969b6.bindTooltip(
+                `<div>
+                     Unnamed
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_e81c2672154de78d064535086765fe0f = L.polyline(
+                [[40.650481, -111.5289712], [40.650434600000004, -111.5289337], [40.6503486, -111.5289096], [40.6502584, -111.5288596], [40.65020799999999, -111.5288027], [40.6501027, -111.5287759], [40.6499425, -111.5288378], [40.64982069999999, -111.528858], [40.6496773, -111.5288688], [40.6496029, -111.5288754], [40.6494544, -111.5288499], [40.6493125, -111.528884], [40.64920209999998, -111.5288844], [40.64908869999999, -111.5289437], [40.64899, -111.5289417], [40.64889569999999, -111.5289366], [40.64861119999999, -111.52896160000002], [40.6484837, -111.5289938], [40.64844310000001, -111.52895800000002], [40.64835949999999, -111.5288814], [40.6483231, -111.528808], [40.6483166, -111.528695], [40.64828630000001, -111.5285861], [40.64828159999999, -111.5285645], [40.64828099999999, -111.528515], [40.64829230000001, -111.5284602], [40.64840639999999, -111.5282842], [40.6484773, -111.5281514], [40.64853709999999, -111.5280364], [40.64864959999999, -111.5279559], [40.64874679999999, -111.5278532], [40.64884730000001, -111.5276834], [40.64895969999999, -111.527516], [40.6490324, -111.5274059], [40.649111299999994, -111.5273118], [40.6491968, -111.5272263], [40.6492404, -111.5271622], [40.64927229999999, -111.5270883], [40.64919979999999, -111.5271411], [40.64911570000001, -111.527234], [40.649126900000006, -111.52713760000002], [40.64920440000001, -111.5270346], [40.6493198, -111.5269631], [40.6493416, -111.52694230000002], [40.6493765, -111.5269123], [40.6494247, -111.5268707], [40.6494441, -111.5268485], [40.64947509999999, -111.5267939], [40.6495089, -111.5267604], [40.6495628, -111.5267188], [40.6495936, -111.52670480000002], [40.649617500000005, -111.5266909], [40.649704, -111.5265743], [40.649751900000005, -111.5265188], [40.64979249999999, -111.526478], [40.64982229999999, -111.5264474], [40.64984930000001, -111.5264234], [40.6498725, -111.5263944], [40.64990959999999, -111.5263406], [40.64993199999999, -111.5263126], [40.649996099999996, -111.52624710000002], [40.650040100000005, -111.5261833], [40.65008149999999, -111.5261258], [40.650100699999996, -111.5260774], [40.6501209, -111.5259895], [40.6501196, -111.52596], [40.650108, -111.5259152], [40.6500847, -111.5258982], [40.65005689999999, -111.5258675], [40.6500332, -111.5258289], [40.6500074, -111.5257927], [40.6499824, -111.5257728], [40.6499726, -111.52575040000002], [40.64994010000001, -111.525734], [40.64989409999998, -111.525696], [40.64983290000001, -111.5256686], [40.64980349999998, -111.5256323], [40.6497825, -111.5255442], [40.64975009999999, -111.525519], [40.64969979999999, -111.52548], [40.649569699999994, -111.5253988], [40.649502600000005, -111.5253816], [40.6494719, -111.5253538], [40.64943980000001, -111.5253466], [40.64936869999999, -111.5253312], [40.64934629999999, -111.5253002], [40.64933090000001, -111.5252425], [40.6493285, -111.5251783], [40.649334999999994, -111.5251189], [40.64935729999999, -111.5250525], [40.6493817, -111.5249925], [40.649415899999994, -111.524936], [40.6494412, -111.5249188], [40.649467599999994, -111.5249123], [40.6495061, -111.5248831], [40.64953580000001, -111.5248575], [40.6495752, -111.5248283], [40.6496931, -111.5247543], [40.64981399999999, -111.52467500000002], [40.6498925, -111.5246351], [40.6503604, -111.5244988], [40.6504124, -111.524478], [40.6503851, -111.5245963], [40.65046999999999, -111.5245606], [40.65054779999999, -111.5245242], [40.6506666, -111.5244631], [40.650753699999996, -111.5243826], [40.65088240000001, -111.52435190000001], [40.6510263, -111.5242746], [40.65111689999999, -111.5242562], [40.6512667, -111.52417990000001], [40.6513459, -111.5241189], [40.6514522, -111.52406700000002], [40.6515789, -111.5240733], [40.6516997, -111.5241286], [40.6518205, -111.5241739], [40.6518959, -111.5242238], [40.65195279999999, -111.5241219], [40.65205209999999, -111.5239766], [40.65216800000001, -111.5238447], [40.6522291, -111.5237306], [40.6522216, -111.5237291], [40.65221939999999, -111.52368320000001], [40.65229870000001, -111.52358800000002], [40.65237989999999, -111.5234717], [40.652967, -111.5229538], [40.65306679999999, -111.5228125], [40.65311259999999, -111.5227507], [40.65312329999999, -111.5227362], [40.6531351, -111.52272200000002], [40.653126400000005, -111.5227151], [40.6531401, -111.5227078], [40.6531293, -111.5227002], [40.65312200000001, -111.5226982], [40.653122799999984, -111.5226868], [40.65311909999999, -111.5226727], [40.65309260000001, -111.52268380000001], [40.6530917, -111.5226662], [40.653129299999996, -111.5225542], [40.65316700000001, -111.5223789], [40.6531069, -111.5222891], [40.6530716, -111.52246], [40.653001499999995, -111.522508], [40.65302249999999, -111.5223621], [40.6529946, -111.5223018], [40.6529102, -111.5224376], [40.652835399999994, -111.52246160000001], [40.6528589, -111.5223429], [40.65286890000001, -111.52233460000001], [40.6528696, -111.5223208], [40.652854100000006, -111.5223139], [40.65284129999999, -111.522305], [40.6528248, -111.52228800000002]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_384720122e1a5cc8d700620cce8175dc = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_a3551172bf47cee95bedbb7fc768f902 = $(`<div id="html_a3551172bf47cee95bedbb7fc768f902" style="width: 100.0%; height: 100.0%;">         <strong>Dawns Trail</strong><br>         Highway type: path<br>         Length: 1398.7 meters<br>         OSM ID: 729738320         </div>`)[0];
+                popup_384720122e1a5cc8d700620cce8175dc.setContent(html_a3551172bf47cee95bedbb7fc768f902);
+            
+        
+
+        poly_line_e81c2672154de78d064535086765fe0f.bindPopup(popup_384720122e1a5cc8d700620cce8175dc)
+        ;
+
+        
+    
+    
+            poly_line_e81c2672154de78d064535086765fe0f.bindTooltip(
+                `<div>
+                     Dawns Trail
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_981f05b8b4d7af9d5da91686dd9e9f02 = L.polyline(
+                [[40.6483054, -111.53221740000001], [40.6483435, -111.5322738], [40.64840259999999, -111.5324213], [40.6484779, -111.5327003], [40.648492099999984, -111.5329765], [40.6485348, -111.5331804], [40.648616200000006, -111.5333735], [40.648905199999994, -111.5339019], [40.64918810000001, -111.5342801], [40.64943840000001, -111.5347146], [40.6496053, -111.5348219], [40.64968459999999, -111.5348031], [40.64989020000001, -111.5348433], [40.650030599999994, -111.5349453], [40.65015669999998, -111.535023], [40.6503236, -111.53502840000002], [40.65047420000001, -111.5349614], [40.650777399999996, -111.53490500000001], [40.650913799999984, -111.5348326], [40.651143700000006, -111.534669], [40.651314600000006, -111.53461], [40.651394, -111.5346261], [40.651859999999985, -111.5345617], [40.6519801, -111.5344705], [40.6520879, -111.5344249], [40.6522711, -111.5343552], [40.6525641, -111.5340762], [40.65238099999999, -111.5341111], [40.652309699999996, -111.53411380000001], [40.652214099999995, -111.5341513], [40.65200449999999, -111.53413790000002], [40.65175829999999, -111.5341674], [40.6513737, -111.5340521], [40.6512333, -111.5340575], [40.6509423, -111.5339689], [40.6506512, -111.5339287], [40.650523, -111.5338], [40.65032569999999, -111.5336873], [40.65022999999999, -111.5334727], [40.65015059999999, -111.5333413], [40.6500733, -111.5332447], [40.6498942, -111.5330811], [40.649823000000005, -111.5329443], [40.64975990000001, -111.5326708], [40.6497599, -111.5323087], [40.6498291, -111.5319653], [40.64983929999999, -111.5315067], [40.6498495, -111.5311687], [40.64991659999999, -111.5308549], [40.6499024, -111.5306564], [40.6498902, -111.5305518], [40.6498678, -111.53049550000001], [40.6498902, -111.5304579], [40.6499471, -111.5304794], [40.64998779999999, -111.53071810000002], [40.650030599999994, -111.5310453], [40.650079399999996, -111.5314986], [40.6501812, -111.5318822], [40.6503033, -111.5323033], [40.6504274, -111.5323757], [40.650535299999994, -111.5323382], [40.6506451, -111.5323221], [40.650753, -111.5323543], [40.650840500000015, -111.5324428], [40.651302399999985, -111.5325983], [40.65148969999999, -111.5325769], [40.651683, -111.5326466], [40.6520778, -111.5324106], [40.65242979999999, -111.5322175], [40.6526089, -111.5320753], [40.65290600000001, -111.5318607], [40.65304430000001, -111.5317776], [40.6531441, -111.5317668], [40.65324989999999, -111.5317373], [40.653441099999995, -111.5317025], [40.653382099999995, -111.5316301], [40.6532031, -111.5315523], [40.65296289999999, -111.531571], [40.652714700000004, -111.5315979], [40.652250699999996, -111.531622], [40.6520452, -111.5315228], [40.65182339999999, -111.5314557], [40.6515548, -111.5311258], [40.65145509999999, -111.5309702], [40.651453, -111.530879], [40.651493699999996, -111.5307932], [40.651642300000006, -111.5307369], [40.6517277, -111.5306779], [40.6517745, -111.5305491], [40.65175009999999, -111.5304445], [40.6516769, -111.5303587], [40.6514958, -111.5303211], [40.6514713, -111.5302273], [40.6514612, -111.5299564], [40.651428599999996, -111.5298357], [40.6511681, -111.5295782], [40.65074689999999, -111.529385], [40.65028089999999, -111.5292885], [40.6500123, -111.5292563], [40.64972530000001, -111.52909], [40.65002239999999, -111.52900420000002], [40.6502585, -111.5290632], [40.650431499999996, -111.52902830000001], [40.650481, -111.5289712]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_a2ae44a87c7cd5bc52198a9c7751d067 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_3fe5903df17bf13f8176e4c707b70847 = $(`<div id="html_3fe5903df17bf13f8176e4c707b70847" style="width: 100.0%; height: 100.0%;">         <strong>Armstrong</strong><br>         Highway type: path<br>         Length: 2392.7 meters<br>         OSM ID: 301715486         </div>`)[0];
+                popup_a2ae44a87c7cd5bc52198a9c7751d067.setContent(html_3fe5903df17bf13f8176e4c707b70847);
+            
+        
+
+        poly_line_981f05b8b4d7af9d5da91686dd9e9f02.bindPopup(popup_a2ae44a87c7cd5bc52198a9c7751d067)
+        ;
+
+        
+    
+    
+            poly_line_981f05b8b4d7af9d5da91686dd9e9f02.bindTooltip(
+                `<div>
+                     Armstrong
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_feb750f1908f76fccc182a369a3f5a1b = L.polyline(
+                [[40.658963099999994, -111.5151199], [40.658897200000006, -111.5151553], [40.658826, -111.5152528], [40.6588425, -111.5153213], [40.6589328, -111.515325], [40.658960199999996, -111.5152275], [40.658963099999994, -111.5151199]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_126a2448a892111873fa6e209086a56d = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_f45ace37122570ea0464b550d754a4ca = $(`<div id="html_f45ace37122570ea0464b550d754a4ca" style="width: 100.0%; height: 100.0%;">         <strong>Unnamed</strong><br>         Highway type: path<br>         Length: 53.3 meters<br>         OSM ID: 915566589         </div>`)[0];
+                popup_126a2448a892111873fa6e209086a56d.setContent(html_f45ace37122570ea0464b550d754a4ca);
+            
+        
+
+        poly_line_feb750f1908f76fccc182a369a3f5a1b.bindPopup(popup_126a2448a892111873fa6e209086a56d)
+        ;
+
+        
+    
+    
+            poly_line_feb750f1908f76fccc182a369a3f5a1b.bindTooltip(
+                `<div>
+                     Unnamed
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_ecef0ef4dd9a3680a99a913a409b5c24 = L.polyline(
+                [[40.66017119999999, -111.5131951], [40.66013929999999, -111.5132275], [40.660071, -111.5133401], [40.65995569999999, -111.5137062], [40.65976229999998, -111.5140655], [40.65977319999999, -111.5142207], [40.65927500000001, -111.514827], [40.65903139999999, -111.5150832], [40.658963099999994, -111.5151199]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_d7d0e4d6c79147d9ebccab1adf7ac96d = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_7eede8fd67878122f74ce20de7ecb496 = $(`<div id="html_7eede8fd67878122f74ce20de7ecb496" style="width: 100.0%; height: 100.0%;">         <strong>Unnamed</strong><br>         Highway type: path / unclassified<br>         Length: 218.6 meters<br>         OSM ID: [915566589, 661185909]         </div>`)[0];
+                popup_d7d0e4d6c79147d9ebccab1adf7ac96d.setContent(html_7eede8fd67878122f74ce20de7ecb496);
+            
+        
+
+        poly_line_ecef0ef4dd9a3680a99a913a409b5c24.bindPopup(popup_d7d0e4d6c79147d9ebccab1adf7ac96d)
+        ;
+
+        
+    
+    
+            poly_line_ecef0ef4dd9a3680a99a913a409b5c24.bindTooltip(
+                `<div>
+                     Unnamed
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_295dab5effab25c75fa8c34cc4ba9703 = L.polyline(
+                [[40.6572906, -111.5141758], [40.657526799999985, -111.5142932]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_1747bd6c465af30f6b09d9c4c171122b = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_6c160e5acbb5b21bb760c4ab4ce998cf = $(`<div id="html_6c160e5acbb5b21bb760c4ab4ce998cf" style="width: 100.0%; height: 100.0%;">         <strong>Three Kings Drive</strong><br>         Highway type: residential<br>         Length: 28.1 meters<br>         OSM ID: 10162264         </div>`)[0];
+                popup_1747bd6c465af30f6b09d9c4c171122b.setContent(html_6c160e5acbb5b21bb760c4ab4ce998cf);
+            
+        
+
+        poly_line_295dab5effab25c75fa8c34cc4ba9703.bindPopup(popup_1747bd6c465af30f6b09d9c4c171122b)
+        ;
+
+        
+    
+    
+            poly_line_295dab5effab25c75fa8c34cc4ba9703.bindTooltip(
+                `<div>
+                     Three Kings Drive
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_34e29228a022f9041797c0df3367f3df = L.polyline(
+                [[40.657399299999994, -111.5138474], [40.657461699999985, -111.5139197], [40.657506500000004, -111.5140068], [40.6575265, -111.5141054], [40.657526799999985, -111.5142932]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_87b674ef1d6737a6ee277f6fa677fa87 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_819324760a0a8df651a54c72b968810f = $(`<div id="html_819324760a0a8df651a54c72b968810f" style="width: 100.0%; height: 100.0%;">         <strong>Unnamed</strong><br>         Highway type: service<br>         Length: 42.6 meters<br>         OSM ID: 964180494         </div>`)[0];
+                popup_87b674ef1d6737a6ee277f6fa677fa87.setContent(html_819324760a0a8df651a54c72b968810f);
+            
+        
+
+        poly_line_34e29228a022f9041797c0df3367f3df.bindPopup(popup_87b674ef1d6737a6ee277f6fa677fa87)
+        ;
+
+        
+    
+    
+            poly_line_34e29228a022f9041797c0df3367f3df.bindTooltip(
+                `<div>
+                     Unnamed
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_94788bd14fd195326234a7db30fb3f2d = L.polyline(
+                [[40.65727009999999, -111.51472630000002], [40.6574301, -111.514564], [40.657320299999995, -111.5143756], [40.6572871, -111.5143157], [40.657272, -111.5142658], [40.6572777, -111.5142234], [40.6572906, -111.5141758]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+        var popup_262471c44b34745b7efda96846c2cfd6 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_74185794dc4091fcfcde1a7de9867a13 = $(`<div id="html_74185794dc4091fcfcde1a7de9867a13" style="width: 100.0%; height: 100.0%;">         <strong>Unnamed</strong><br>         Highway type: service<br>         Length: 61.2 meters<br>         OSM ID: 1476732297         </div>`)[0];
+                popup_262471c44b34745b7efda96846c2cfd6.setContent(html_74185794dc4091fcfcde1a7de9867a13);
+            
+        
+
+        poly_line_94788bd14fd195326234a7db30fb3f2d.bindPopup(popup_262471c44b34745b7efda96846c2cfd6)
+        ;
+
+        
+    
+    
+            poly_line_94788bd14fd195326234a7db30fb3f2d.bindTooltip(
+                `<div>
+                     Unnamed
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_789930359f6c08b9bdaed51382bb009d = L.polyline(
+                [[40.650481, -111.5289712], [40.6507876, -111.5289961], [40.6510867, -111.5290015], [40.6514734, -111.5291383], [40.6517908, -111.5292885], [40.6522955, -111.5291892], [40.6520086, -111.5290095], [40.6518559, -111.5288486], [40.651451, -111.5283524], [40.6511519, -111.5281298], [40.6513513, -111.5281405], [40.6517461, -111.5282022], [40.6518844, -111.528288], [40.6520187, -111.5283497], [40.6520798, -111.5283122], [40.6520513, -111.5282022], [40.651744, -111.5279474], [40.6515584, -111.5278166], [40.651782, -111.527725], [40.651805, -111.527561], [40.651811, -111.5275439], [40.651838, -111.527467], [40.651884, -111.527396], [40.6519588, -111.5273158], [40.652079, -111.527187], [40.6521711, -111.5270212], [40.6522372, -111.5268047], [40.6522769, -111.5266982], [40.6523207, -111.5266278], [40.6523572, -111.5265995], [40.653314, -111.526651], [40.6534012, -111.5266612], [40.6534822, -111.5266767], [40.6535222, -111.5266783], [40.6535551, -111.5266744], [40.65359, -111.526676], [40.6537575, -111.5267066], [40.6537805, -111.5267211], [40.6538185, -111.5267527], [40.6539167, -111.5267838], [40.653983, -111.526787], [40.654143, -111.526804], [40.65442, -111.526732], [40.654783, -111.526679], [40.65498, -111.526669], [40.655067, -111.526639], [40.655139, -111.526574], [40.65517, -111.526519], [40.655232, -111.526254], [40.655273, -111.526151], [40.655374, -111.526021], [40.655617, -111.525802], [40.655733, -111.525743], [40.65582, -111.525738], [40.655976, -111.525778], [40.6562382, -111.5258042], [40.6563204, -111.5257996], [40.6563688, -111.5257798], [40.6564126, -111.5257539], [40.6565046, -111.5256951], [40.6565721, -111.5256378], [40.6566744, -111.5255788], [40.6567153, -111.5255408], [40.656734, -111.525499], [40.656841, -111.525224], [40.656893, -111.525074], [40.656913, -111.524959], [40.656905, -111.524819], [40.656851, -111.524672], [40.65678, -111.524566], [40.656661, -111.524435], [40.656625, -111.52437], [40.656614, -111.524286], [40.656672, -111.524135], [40.65675, -111.524023], [40.656835, -111.523937], [40.656892, -111.523905], [40.657179, -111.52383], [40.657497, -111.523674], [40.657807, -111.523425], [40.657896, -111.523295], [40.657945, -111.523184], [40.658039, -111.522782], [40.658144, -111.522471], [40.658338, -111.522036], [40.658499, -111.521753], [40.658628, -111.521442], [40.658654, -111.521354], [40.65869, -111.521075], [40.658739, -111.520875], [40.65877, -111.520643], [40.658774, -111.5204556], [40.6587581, -111.5204086], [40.6587214, -111.5203598], [40.6586283, -111.5203246], [40.65843, -111.520217], [40.657845, -111.520059], [40.657786, -111.520007], [40.657737, -111.519926], [40.6577023, -111.5197994], [40.657677, -111.519671], [40.657676, -111.519579], [40.657678, -111.5195194], [40.657701, -111.5194659], [40.657733, -111.519399], [40.6578857, -111.5191866], [40.6579234, -111.519105], [40.6579809, -111.5189964], [40.65805, -111.518894], [40.658081, -111.5188252], [40.6581105, -111.5187677], [40.6581265, -111.5187096], [40.6581496, -111.5186652], [40.6581705, -111.51863], [40.6581998, -111.5185787], [40.658235, -111.518516], [40.658301, -111.518214], [40.658319, -111.518063], [40.658313, -111.517852], [40.658293, -111.51775], [40.658264, -111.517678], [40.658208, -111.517608], [40.658058, -111.517484], [40.657932, -111.517317], [40.657878, -111.5172], [40.657821, -111.516991], [40.65778, -111.516777], [40.6576844, -111.5163875], [40.6576338, -111.5162592], [40.6575483, -111.5161269], [40.6574931, -111.5160486], [40.6574269, -111.5159986], [40.6573572, -111.5159532], [40.6572401, -111.5158954], [40.656537, -111.515528], [40.656478, -111.515475], [40.6563938, -111.515399]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 8}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+            poly_line_789930359f6c08b9bdaed51382bb009d.bindTooltip(
+                `<div>
+                     Currently recognized Armstrong
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_4ada816028cecf53a6f3ae9e3ed8aeda = L.polyline(
+                [[40.6483054, -111.5322174], [40.6483435, -111.5322738], [40.6484026, -111.5324213], [40.6484779, -111.5327003], [40.6484921, -111.5329765], [40.6485348, -111.5331804], [40.6486162, -111.5333735], [40.6489052, -111.5339019], [40.6491881, -111.5342801], [40.6494384, -111.5347146], [40.6496053, -111.5348219], [40.6496846, -111.5348031], [40.6498902, -111.5348433], [40.6500306, -111.5349453], [40.6501567, -111.535023], [40.6503236, -111.5350284], [40.6504742, -111.5349614], [40.6507774, -111.534905], [40.6509138, -111.5348326], [40.6511437, -111.534669], [40.6513146, -111.53461], [40.651394, -111.5346261], [40.65186, -111.5345617], [40.6519801, -111.5344705], [40.6520879, -111.5344249], [40.6522711, -111.5343552], [40.6525641, -111.5340762], [40.652381, -111.5341111], [40.6523097, -111.5341138], [40.6522141, -111.5341513], [40.6520045, -111.5341379], [40.6517583, -111.5341674], [40.6513737, -111.5340521], [40.6512333, -111.5340575], [40.6509423, -111.5339689], [40.6506512, -111.5339287], [40.650523, -111.5338], [40.6503257, -111.5336873], [40.65023, -111.5334727], [40.6501506, -111.5333413], [40.6500733, -111.5332447], [40.6498942, -111.5330811], [40.649823, -111.5329443], [40.6497599, -111.5326708], [40.6497599, -111.5323087], [40.6498291, -111.5319653], [40.6498393, -111.5315067], [40.6498495, -111.5311687], [40.6499166, -111.5308549], [40.6499024, -111.5306564], [40.6498902, -111.5305518], [40.6498678, -111.5304955], [40.6498902, -111.5304579], [40.6499471, -111.5304794], [40.6499878, -111.5307181], [40.6500306, -111.5310453], [40.6500794, -111.5314986], [40.6501812, -111.5318822], [40.6503033, -111.5323033], [40.6504274, -111.5323757], [40.6505353, -111.5323382], [40.6506451, -111.5323221], [40.650753, -111.5323543], [40.6508405, -111.5324428], [40.6513024, -111.5325983], [40.6514897, -111.5325769], [40.651683, -111.5326466], [40.6520778, -111.5324106], [40.6524298, -111.5322175], [40.6526089, -111.5320753], [40.652906, -111.5318607], [40.6530443, -111.5317776], [40.6531441, -111.5317668], [40.6532499, -111.5317373], [40.6534411, -111.5317025], [40.6533821, -111.5316301], [40.6532031, -111.5315523], [40.6529629, -111.531571], [40.6527147, -111.5315979], [40.6522507, -111.531622], [40.6520452, -111.5315228], [40.6518234, -111.5314557], [40.6515548, -111.5311258], [40.6514551, -111.5309702], [40.651453, -111.530879], [40.6514937, -111.5307932], [40.6516423, -111.5307369], [40.6517277, -111.5306779], [40.6517745, -111.5305491], [40.6517501, -111.5304445], [40.6516769, -111.5303587], [40.6514958, -111.5303211], [40.6514713, -111.5302273], [40.6514612, -111.5299564], [40.6514286, -111.5298357], [40.6511681, -111.5295782], [40.6507469, -111.529385], [40.6502809, -111.5292885], [40.6500123, -111.5292563], [40.6497253, -111.52909], [40.6500224, -111.5290042], [40.6502585, -111.5290632], [40.6504315, -111.5290283], [40.650481, -111.5289712]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 8}
+            ).addTo(map_9ae1e6cb548aae5fcb5796b74f918c4d);
+        
+    
+            poly_line_4ada816028cecf53a6f3ae9e3ed8aeda.bindTooltip(
+                `<div>
+                     Currently recognized Armstrong
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            map_9ae1e6cb548aae5fcb5796b74f918c4d.fitBounds(
+                [[40.6431529, -111.53502840000002], [40.660679, -111.51102680000001]],
+                {}
+            );
+        
+</script>
+</html>

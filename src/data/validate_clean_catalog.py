@@ -9,7 +9,7 @@ EXPECTED_REMOVED_TRAILS = {
 
 
 def main() -> None:
-    project_root = Path(__file__).resolve().parents[1]
+    project_root = Path(__file__).resolve().parents[2]
 
     catalog_path = (
         project_root
