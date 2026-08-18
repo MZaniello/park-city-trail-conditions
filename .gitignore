@@ -17,3 +17,5 @@ __pycache__/
 # Generated data (we can recreate these)
 data/raw/*.graphml
 data/raw/*.tif
+
+.streamlit/secrets.toml

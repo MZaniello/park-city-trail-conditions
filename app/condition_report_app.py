@@ -1,8 +1,10 @@
 from pathlib import Path
 from datetime import datetime
 
+import gspread
 import pandas as pd
 import streamlit as st
+from google.oauth2.service_account import Credentials
 
 
 ALLOWED_CONDITIONS = [
@@ -40,8 +42,38 @@ def load_trails(project_root):
     )
 
 
-def load_reports(reports_path):
-    """Load existing condition reports."""
+def get_worksheet():
+    """Connect to the Google Sheet using Streamlit secrets."""
+
+    scopes = [
+        "https://www.googleapis.com/auth/spreadsheets",
+        "https://www.googleapis.com/auth/drive",
+    ]
+
+    credentials = Credentials.from_service_account_info(
+        dict(st.secrets["google_service_account"]),
+        scopes=scopes,
+    )
+
+    client = gspread.authorize(credentials)
+
+    spreadsheet = client.open_by_key(
+        st.secrets["google_sheet"]["spreadsheet_id"]
+    )
+
+    worksheet = spreadsheet.worksheet(
+        st.secrets["google_sheet"]["worksheet_name"]
+    )
+
+    return worksheet
+
+
+def load_reports():
+    """Load reports currently stored in Google Sheets."""
+
+    worksheet = get_worksheet()
+
+    records = worksheet.get_all_records()
 
     columns = [
         "date",
@@ -53,74 +85,54 @@ def load_reports(reports_path):
         "notes",
     ]
 
-    if not reports_path.exists():
+    if not records:
         return pd.DataFrame(columns=columns)
 
-    reports = pd.read_csv(
-        reports_path,
-        keep_default_na=False,
-    )
-
-    return reports
+    return pd.DataFrame(records)
 
 
 def save_report(
-    reports_path,
     trail_name,
     condition,
     source,
     trail_section,
     notes,
 ):
-    """Append one trail-condition report."""
+    """Append one trail-condition report to Google Sheets."""
+
+    worksheet = get_worksheet()
 
     now = datetime.now()
 
-    new_report = pd.DataFrame(
-        [
-            {
-                "date": now.strftime("%Y-%m-%d"),
-                "time": now.strftime("%H:%M"),
-                "trail_name": trail_name,
-                "condition": condition,
-                "source": source,
-                "trail_section": trail_section.strip(),
-                "notes": notes.strip(),
-            }
-        ]
-    )
+    row = [
+        now.strftime("%Y-%m-%d"),
+        now.strftime("%H:%M"),
+        trail_name,
+        condition,
+        source,
+        trail_section.strip(),
+        notes.strip(),
+    ]
 
-    existing = load_reports(reports_path)
-
-    combined = pd.concat(
-        [existing, new_report],
-        ignore_index=True,
-    )
-
-    reports_path.parent.mkdir(
-        parents=True,
-        exist_ok=True,
-    )
-
-    combined.to_csv(
-        reports_path,
-        index=False,
+    worksheet.append_row(
+        row,
+        value_input_option="USER_ENTERED",
     )
 
 
-def undo_last_report(reports_path):
-    """Delete the most recently entered report."""
+def undo_last_report():
+    """Delete the most recently entered Google Sheet row."""
 
-    reports = load_reports(reports_path)
+    worksheet = get_worksheet()
 
-    if reports.empty:
+    values = worksheet.get_all_values()
+
+    # Row 1 is the header.
+    if len(values) <= 1:
         return False
 
-    reports = reports.iloc[:-1]
-
-    reports.to_csv(
-        reports_path,
-        index=False,
+    worksheet.delete_rows(
+        len(values)
     )
 
     return True
@@ -128,13 +140,6 @@ def undo_last_report(reports_path):
 
 def main():
     project_root = Path(__file__).resolve().parents[1]
-
-    reports_path = (
-        project_root
-        / "data"
-        / "observations"
-        / "trail_condition_reports.csv"
-    )
 
     trails = load_trails(project_root)
 
@@ -149,6 +154,22 @@ def main():
     st.write(
         "Quickly log how a trail is riding."
     )
+
+    # ---------------------------------------------------------
+    # TEST GOOGLE SHEETS CONNECTION
+    # ---------------------------------------------------------
+
+    try:
+        reports = load_reports()
+
+    except Exception as error:
+        st.error(
+            "Could not connect to Google Sheets."
+        )
+
+        st.exception(error)
+
+        st.stop()
 
     # ---------------------------------------------------------
     # TRAIL
@@ -195,7 +216,10 @@ def main():
 
     trail_section = st.text_input(
         "Trail section (optional)",
-        placeholder="Example: upper, lower, near Armstrong intersection",
+        placeholder=(
+            "Example: upper, lower, "
+            "near Armstrong intersection"
+        ),
     )
 
     notes = st.text_area(
@@ -215,24 +239,36 @@ def main():
         type="primary",
         use_container_width=True,
     ):
-        save_report(
-            reports_path=reports_path,
-            trail_name=trail_name,
-            condition=condition,
-            source=source,
-            trail_section=trail_section,
-            notes=notes,
-        )
+        try:
+            save_report(
+                trail_name=trail_name,
+                condition=condition,
+                source=source,
+                trail_section=trail_section,
+                notes=notes,
+            )
 
-        st.success(
-            f"Saved: {trail_name} — {condition}"
-        )
+            st.success(
+                f"Saved: {trail_name} — {condition}"
+            )
+
+            st.rerun()
+
+        except Exception as error:
+            st.error(
+                "Report could not be saved."
+            )
+            st.exception(error)
+
+    # ---------------------------------------------------------
+    # RELOAD REPORTS AFTER SUBMISSION
+    # ---------------------------------------------------------
+
+    reports = load_reports()
 
     # ---------------------------------------------------------
     # RECENT REPORTS
     # ---------------------------------------------------------
-
-    reports = load_reports(reports_path)
 
     if not reports.empty:
         st.divider()
@@ -246,7 +282,8 @@ def main():
         )
 
         st.write(
-            f"Total reports collected: **{len(reports)}**"
+            f"Total reports collected: "
+            f"**{len(reports)}**"
         )
 
         # -----------------------------------------------------
@@ -264,15 +301,23 @@ def main():
             if st.button(
                 "Undo Last Report"
             ):
-                if undo_last_report(reports_path):
-                    st.success(
-                        "Last report deleted."
+                try:
+                    if undo_last_report():
+                        st.success(
+                            "Last report deleted."
+                        )
+                        st.rerun()
+
+                    else:
+                        st.warning(
+                            "There are no reports to delete."
+                        )
+
+                except Exception as error:
+                    st.error(
+                        "Could not delete the last report."
                     )
-                    st.rerun()
-                else:
-                    st.warning(
-                        "There are no reports to delete."
-                    )
+                    st.exception(error)
 
 
 if __name__ == "__main__":
