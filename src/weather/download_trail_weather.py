@@ -1,4 +1,5 @@
 from pathlib import Path
+from datetime import date
 import time
 
 import pandas as pd
@@ -6,7 +7,6 @@ import requests
 
 
 START_DATE = "2023-01-01"
-END_DATE = "2026-08-01"
 
 DAILY_VARIABLES = [
     "temperature_2m_max",
@@ -18,7 +18,7 @@ DAILY_VARIABLES = [
 ]
 
 
-def download_weather(latitude, longitude):
+def download_weather(latitude, longitude, end_date):
     """Download historical weather for one trail location with retries."""
 
     url = "https://archive-api.open-meteo.com/v1/archive"
@@ -27,7 +27,7 @@ def download_weather(latitude, longitude):
         "latitude": latitude,
         "longitude": longitude,
         "start_date": START_DATE,
-        "end_date": END_DATE,
+        "end_date": end_date,
         "daily": ",".join(DAILY_VARIABLES),
         "temperature_unit": "fahrenheit",
         "precipitation_unit": "inch",
@@ -37,6 +37,7 @@ def download_weather(latitude, longitude):
     max_retries = 5
 
     for attempt in range(max_retries):
+
         response = requests.get(
             url,
             params=params,
@@ -48,10 +49,12 @@ def download_weather(latitude, longitude):
             return pd.DataFrame(data["daily"])
 
         if response.status_code == 429:
+
             wait_seconds = 10 * (attempt + 1)
 
             print(
-                f"  Rate limited. Waiting {wait_seconds} seconds..."
+                f"  Rate limited. "
+                f"Waiting {wait_seconds} seconds..."
             )
 
             time.sleep(wait_seconds)
@@ -81,11 +84,17 @@ def main():
         / "trail_historical_weather.csv"
     )
 
+    # Open-Meteo's archive endpoint is updated continuously,
+    # so use today's date instead of a hard-coded cutoff.
+    end_date = date.today().isoformat()
+
     print("Loading trail locations...")
 
     trails = pd.read_csv(locations_path)
 
     print(f"Trails to process: {len(trails)}")
+    print(f"Weather start date: {START_DATE}")
+    print(f"Weather end date: {end_date}")
 
     all_weather = []
 
@@ -101,6 +110,7 @@ def main():
         weather = download_weather(
             trail["latitude"],
             trail["longitude"],
+            end_date,
         )
 
         weather["trail_name"] = trail_name
@@ -109,7 +119,7 @@ def main():
 
         all_weather.append(weather)
 
-        # Be polite to the API.
+        # Slow requests slightly to reduce rate-limit problems.
         time.sleep(2)
 
     print("\nCombining weather datasets...")
@@ -142,6 +152,17 @@ def main():
         ]
     ]
 
+    combined = combined.sort_values(
+        ["date", "trail_name"]
+    ).reset_index(drop=True)
+
+    duplicate_rows = combined.duplicated(
+        subset=[
+            "date",
+            "trail_name",
+        ]
+    ).sum()
+
     output_path.parent.mkdir(
         parents=True,
         exist_ok=True,
@@ -154,9 +175,26 @@ def main():
 
     print("\nDownload complete!")
     print(f"Rows created: {len(combined):,}")
-    print(f"Unique trails: {combined['trail_name'].nunique()}")
-    print(f"First date: {combined['date'].min().date()}")
-    print(f"Last date: {combined['date'].max().date()}")
+    print(
+        f"Unique trails: "
+        f"{combined['trail_name'].nunique()}"
+    )
+    print(
+        f"Unique dates: "
+        f"{combined['date'].nunique():,}"
+    )
+    print(
+        f"Duplicate trail/date rows: "
+        f"{duplicate_rows:,}"
+    )
+    print(
+        f"First date: "
+        f"{combined['date'].min().date()}"
+    )
+    print(
+        f"Last date: "
+        f"{combined['date'].max().date()}"
+    )
     print(f"Saved to: {output_path}")
 
 
