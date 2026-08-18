@@ -7,6 +7,7 @@ from google.oauth2.service_account import Credentials
 
 
 EXPECTED_COLUMNS = [
+    "timestamp",
     "date",
     "time",
     "trail_name",
@@ -84,13 +85,21 @@ def main():
             + ", ".join(sorted(missing_columns))
         )
 
-    reports = reports[EXPECTED_COLUMNS].copy()
+    reports = reports[
+        EXPECTED_COLUMNS
+    ].copy()
 
     # ---------------------------------------------------------
     # NORMALIZE VALUES
     # ---------------------------------------------------------
 
     if not reports.empty:
+
+        reports["timestamp"] = pd.to_datetime(
+            reports["timestamp"],
+            errors="coerce",
+            utc=True,
+        )
 
         reports["date"] = pd.to_datetime(
             reports["date"],
@@ -147,9 +156,15 @@ def main():
     # SUMMARY
     # ---------------------------------------------------------
 
-    print("\nDownload complete!")
-    print(f"Reports downloaded: {len(reports):,}")
-    print(f"Saved to: {output_path}")
+    print()
+    print("Download complete!")
+    print(
+        f"Reports downloaded: "
+        f"{len(reports):,}"
+    )
+    print(
+        f"Saved to: {output_path}"
+    )
 
     if not reports.empty:
 
@@ -158,22 +173,24 @@ def main():
             f"{reports['trail_name'].nunique()}"
         )
 
-        valid_dates = reports[
-            "date"
+        valid_timestamps = reports[
+            "timestamp"
         ].dropna()
 
-        if not valid_dates.empty:
+        if not valid_timestamps.empty:
+
             print(
-                "First report date: "
-                f"{valid_dates.min().date()}"
+                "First report timestamp: "
+                f"{valid_timestamps.min()}"
             )
 
             print(
-                "Last report date: "
-                f"{valid_dates.max().date()}"
+                "Last report timestamp: "
+                f"{valid_timestamps.max()}"
             )
 
-        print("\nConditions:")
+        print()
+        print("Conditions:")
 
         print(
             reports["condition"]
@@ -181,7 +198,8 @@ def main():
             .to_string()
         )
 
-        print("\nSources:")
+        print()
+        print("Sources:")
 
         print(
             reports["source"]
@@ -190,9 +208,11 @@ def main():
         )
 
     else:
+
         print(
             "No reports exist yet. "
-            "The local snapshot was created with headers only."
+            "The local snapshot was created "
+            "with headers only."
         )
 
 

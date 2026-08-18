@@ -1,11 +1,14 @@
 from pathlib import Path
 from datetime import datetime
+from zoneinfo import ZoneInfo
 
 import gspread
 import pandas as pd
 import streamlit as st
 from google.oauth2.service_account import Credentials
 
+
+PARK_CITY_TIMEZONE = ZoneInfo("America/Denver")
 
 ALLOWED_CONDITIONS = [
     "ideal",
@@ -76,6 +79,7 @@ def load_reports():
     records = worksheet.get_all_records()
 
     columns = [
+        "timestamp",
         "date",
         "time",
         "trail_name",
@@ -102,9 +106,12 @@ def save_report(
 
     worksheet = get_worksheet()
 
-    now = datetime.now()
+    now = datetime.now(
+        PARK_CITY_TIMEZONE
+    )
 
     row = [
+        now.isoformat(timespec="seconds"),
         now.strftime("%Y-%m-%d"),
         now.strftime("%H:%M"),
         trail_name,
@@ -115,9 +122,9 @@ def save_report(
     ]
 
     worksheet.append_row(
-        row,
-        value_input_option="USER_ENTERED",
-    )
+    row,
+    value_input_option="RAW",
+)
 
 
 def undo_last_report():

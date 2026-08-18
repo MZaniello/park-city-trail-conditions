@@ -50,9 +50,8 @@ def main():
     print(f"Reports found: {len(reports):,}")
 
     if reports.empty:
-        print(
-            "\nNo condition reports exist yet."
-        )
+        print()
+        print("No condition reports exist yet.")
         print(
             "Nothing to join to the modeling dataset."
         )
@@ -61,6 +60,12 @@ def main():
     # ---------------------------------------------------------
     # CLEAN REPORTS
     # ---------------------------------------------------------
+
+    reports["timestamp"] = pd.to_datetime(
+        reports["timestamp"],
+        errors="coerce",
+        utc=True,
+    )
 
     reports["date"] = pd.to_datetime(
         reports["date"],
@@ -87,8 +92,31 @@ def main():
         .str.lower()
     )
 
-    # Remove reports with unusable dates.
-    invalid_dates = reports["date"].isna().sum()
+    # ---------------------------------------------------------
+    # VALIDATE TIMESTAMPS
+    # ---------------------------------------------------------
+
+    invalid_timestamps = (
+        reports["timestamp"].isna().sum()
+    )
+
+    if invalid_timestamps:
+        print(
+            f"Removing {invalid_timestamps} report(s) "
+            "with invalid timestamps."
+        )
+
+        reports = reports[
+            reports["timestamp"].notna()
+        ].copy()
+
+    # ---------------------------------------------------------
+    # VALIDATE DATES
+    # ---------------------------------------------------------
+
+    invalid_dates = (
+        reports["date"].isna().sum()
+    )
 
     if invalid_dates:
         print(
@@ -100,7 +128,10 @@ def main():
             reports["date"].notna()
         ].copy()
 
-    # Remove unknown condition labels.
+    # ---------------------------------------------------------
+    # VALIDATE CONDITIONS
+    # ---------------------------------------------------------
+
     invalid_conditions = (
         ~reports["condition"].isin(
             VALID_CONDITIONS
@@ -123,8 +154,9 @@ def main():
         ].copy()
 
     if reports.empty:
+        print()
         print(
-            "\nNo usable condition reports "
+            "No usable condition reports "
             "remain after validation."
         )
         return
@@ -195,8 +227,9 @@ def main():
     # ---------------------------------------------------------
 
     if unmatched:
+        print()
         print(
-            "\nReports without matching "
+            "Reports without matching "
             "weather/terrain data:"
         )
 
@@ -205,6 +238,7 @@ def main():
                 labeled["_merge"]
                 == "left_only",
                 [
+                    "timestamp",
                     "date",
                     "trail_name",
                     "condition",
@@ -214,8 +248,7 @@ def main():
             )
         )
 
-    # For ML training, only keep observations
-    # with corresponding feature data.
+    # Keep only reports that have corresponding feature data.
     labeled = labeled[
         labeled["_merge"] == "both"
     ].copy()
@@ -226,7 +259,7 @@ def main():
     )
 
     # ---------------------------------------------------------
-    # RENAME LABEL
+    # RENAME TARGET VARIABLE
     # ---------------------------------------------------------
 
     labeled.rename(
@@ -236,6 +269,17 @@ def main():
         },
         inplace=True,
     )
+
+    # ---------------------------------------------------------
+    # SORT
+    # ---------------------------------------------------------
+
+    labeled = labeled.sort_values(
+        [
+            "timestamp",
+            "trail_name",
+        ]
+    ).reset_index(drop=True)
 
     # ---------------------------------------------------------
     # SAVE
@@ -255,8 +299,9 @@ def main():
     # SUMMARY
     # ---------------------------------------------------------
 
+    print()
     print(
-        "\nLabeled modeling dataset created!"
+        "Labeled modeling dataset created!"
     )
 
     print(
@@ -278,9 +323,8 @@ def main():
 
     if not labeled.empty:
 
-        print(
-            "\nCondition labels:"
-        )
+        print()
+        print("Condition labels:")
 
         print(
             labeled[
@@ -290,9 +334,8 @@ def main():
             .to_string()
         )
 
-        print(
-            "\nReports by source:"
-        )
+        print()
+        print("Reports by source:")
 
         print(
             labeled[
@@ -303,6 +346,7 @@ def main():
         )
 
         preview_columns = [
+            "timestamp",
             "date",
             "trail_name",
             "actual_condition",
@@ -324,8 +368,9 @@ def main():
             if column in labeled.columns
         ]
 
+        print()
         print(
-            "\nExample labeled observations:"
+            "Example labeled observations:"
         )
 
         print(
