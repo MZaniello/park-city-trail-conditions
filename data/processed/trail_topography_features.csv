@@ -1,0 +1,20 @@
+trail_name,sampled_length_miles,mean_slope_degrees,median_slope_degrees,north_facing_pct,east_facing_pct,south_facing_pct,west_facing_pct,topography_sample_count
+9K Trail,4.8,20.8,20.3,18.5,4.1,49.4,28.0,389
+Apex,2.2,19.0,17.7,0.0,13.9,81.7,4.4,180
+Armstrong,3.0,20.1,19.6,0.0,7.9,31.4,60.7,242
+Big Easy,3.3,8.3,7.4,29.6,8.4,5.8,56.2,274
+CMG,3.9,21.7,21.8,0.0,27.6,47.4,25.1,323
+Cyn City,2.6,22.2,22.3,2.4,1.4,86.3,10.0,211
+Empire Link,2.2,24.3,25.2,10.9,15.8,47.5,25.7,183
+Flagstaff Loop,2.9,10.5,9.8,9.6,8.8,37.2,44.4,239
+Jenni's Trail upper,3.1,20.1,19.1,0.0,13.3,49.6,37.1,256
+Keystone Trail,2.6,17.7,16.2,21.0,14.0,37.4,27.6,214
+Lost Prospector,3.6,19.8,19.7,9.6,41.1,39.1,10.3,302
+Mid-Mountain Trail,7.4,20.4,19.6,8.0,17.1,38.3,36.5,613
+Mother Urban,4.5,22.8,23.0,14.3,0.0,29.7,55.9,370
+Rambler,4.3,10.8,9.9,10.0,33.3,23.9,32.8,351
+Ripple Trail,3.0,20.3,19.6,0.0,12.9,59.0,28.1,256
+Round Valley Express,2.5,6.3,5.6,40.3,10.4,21.8,27.5,211
+Solamere,2.3,21.3,20.0,12.0,76.6,10.4,1.0,192
+Spiro Trail,3.1,21.3,21.4,0.0,23.3,53.4,23.3,253
+Tidal Wave,2.7,20.7,20.7,3.2,45.0,31.5,20.3,222
