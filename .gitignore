@@ -48,3 +48,22 @@ data/processed/expanded_trail_components.csv
 data/processed/expanded_trail_name_summary.csv
 data/processed/expanded_trail_segments_deduplicated.csv
 data/processed/trail_catalog_review_progress.csv
+
+# Runtime forecast intermediates
+data/raw/weather_group_forecast.csv
+data/raw/trail_forecast.csv
+data/processed/master_trail_forecast_features.csv
+data/processed/master_latest_condition_predictions_v3_2.csv
+data/processed/master_today_condition_predictions_v3_2.csv
+
+# Condition-report local snapshot
+data/raw/condition_reports.csv
+
+# Catalog construction / review intermediates
+data/processed/expanded_trail_candidates.csv
+data/processed/expanded_trail_locations.csv
+data/processed/master_trail_geometries.geojson
+data/processed/master_trail_review.csv
+data/processed/master_trail_review_with_locations.csv
+data/processed/master_trail_triage.csv
+data/processed/weather_group_summary.csv
