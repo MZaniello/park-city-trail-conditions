@@ -1,0 +1,31 @@
+terrain_profile,scenario,precip_1d,precip_3d,precip_7d,days_since_precip,mean_temp_3d,snowfall_3d,freeze_thaw_3d,minimum_elevation_feet,maximum_elevation_feet,north_facing_pct,south_facing_pct,estimated_moisture,surface_state,rideability_score,rideability,reason
+low_south,bone_dry_10_days,0.0,0.0,0.0,10,74,0.0,0,6500,7000,10,60,0.0,DUSTY,67,FAIR,low retained moisture may produce dust or loose soil; 10 days since measurable precipitation
+low_south,very_dry_5_days,0.0,0.0,0.05,5,72,0.0,0,6500,7000,10,60,0.004,DUSTY,73,FAIR,low retained moisture may produce dust or loose soil; 5 days since measurable precipitation
+low_south,light_recent_moisture,0.02,0.08,0.15,0,68,0.0,0,6500,7000,10,60,0.068,DRY,86,GOOD,surface likely dry but still firm
+low_south,hero_dirt_target,0.0,0.18,0.3,1,66,0.0,0,6500,7000,10,60,0.11,DRY,89,GOOD,surface likely dry but still firm
+low_south,damp,0.08,0.35,0.55,0,62,0.0,0,6500,7000,10,60,0.298,IDEAL,95,EXCELLENT,moisture near hero-dirt range; light precipitation today
+low_south,wet,0.25,0.7,1.0,0,58,0.0,0,6500,7000,10,60,0.632,WET,39,POOR,surface moisture likely affecting traction; substantial precipitation today
+low_south,very_wet,0.6,1.2,1.8,0,55,0.0,0,6500,7000,10,60,1.196,MUDDY,0,AVOID,high retained moisture creates muddy or saturated risk; heavy precipitation today
+low_south,saturated,1.0,2.0,3.0,0,52,0.0,0,6500,7000,10,60,2.137,MUDDY,0,AVOID,high retained moisture creates muddy or saturated risk; heavy precipitation today
+low_south,freeze_thaw,0.02,0.15,0.25,0,36,0.0,3,6500,7000,10,60,0.14,IDEAL,82,GOOD,moisture near hero-dirt range; recent freeze-thaw activity
+low_south,recent_snow,0.1,0.4,0.6,0,31,4.0,1,6500,7000,10,60,0.393,SNOW,0,AVOID,recent snowfall affects riding; moderate precipitation today; recent freeze-thaw activity
+mid_mixed,bone_dry_10_days,0.0,0.0,0.0,10,74,0.0,0,7400,8200,30,30,0.0,DUSTY,67,FAIR,low retained moisture may produce dust or loose soil; 10 days since measurable precipitation
+mid_mixed,very_dry_5_days,0.0,0.0,0.05,5,72,0.0,0,7400,8200,30,30,0.005,DUSTY,73,FAIR,low retained moisture may produce dust or loose soil; 5 days since measurable precipitation
+mid_mixed,light_recent_moisture,0.02,0.08,0.15,0,68,0.0,0,7400,8200,30,30,0.076,DRY,87,GOOD,surface likely dry but still firm
+mid_mixed,hero_dirt_target,0.0,0.18,0.3,1,66,0.0,0,7400,8200,30,30,0.123,DRY,89,GOOD,surface likely dry but still firm
+mid_mixed,damp,0.08,0.35,0.55,0,62,0.0,0,7400,8200,30,30,0.333,DAMP,83,GOOD,surface slightly wetter than ideal; light precipitation today
+mid_mixed,wet,0.25,0.7,1.0,0,58,0.0,0,7400,8200,30,30,0.706,WET,33,AVOID,surface moisture likely affecting traction; substantial precipitation today
+mid_mixed,very_wet,0.6,1.2,1.8,0,55,0.0,0,7400,8200,30,30,1.337,MUDDY,0,AVOID,high retained moisture creates muddy or saturated risk; heavy precipitation today
+mid_mixed,saturated,1.0,2.0,3.0,0,52,0.0,0,7400,8200,30,30,2.389,MUDDY,0,AVOID,high retained moisture creates muddy or saturated risk; heavy precipitation today
+mid_mixed,freeze_thaw,0.02,0.15,0.25,0,36,0.0,3,7400,8200,30,30,0.157,IDEAL,83,GOOD,moisture near hero-dirt range; recent freeze-thaw activity
+mid_mixed,recent_snow,0.1,0.4,0.6,0,31,4.0,1,7400,8200,30,30,0.44,SNOW,0,AVOID,recent snowfall affects riding; moderate precipitation today; recent freeze-thaw activity
+high_north,bone_dry_10_days,0.0,0.0,0.0,10,74,0.0,0,9000,9800,65,10,0.0,DUSTY,67,FAIR,low retained moisture may produce dust or loose soil; 10 days since measurable precipitation
+high_north,very_dry_5_days,0.0,0.0,0.05,5,72,0.0,0,9000,9800,65,10,0.006,DUSTY,73,FAIR,low retained moisture may produce dust or loose soil; 5 days since measurable precipitation
+high_north,light_recent_moisture,0.02,0.08,0.15,0,68,0.0,0,9000,9800,65,10,0.085,DRY,87,GOOD,surface likely dry but still firm
+high_north,hero_dirt_target,0.0,0.18,0.3,1,66,0.0,0,9000,9800,65,10,0.139,DRY,90,GOOD,surface likely dry but still firm
+high_north,damp,0.08,0.35,0.55,0,62,0.0,0,9000,9800,65,10,0.375,DAMP,82,GOOD,surface slightly wetter than ideal; light precipitation today
+high_north,wet,0.25,0.7,1.0,0,58,0.0,0,9000,9800,65,10,0.795,MUDDY,14,AVOID,high retained moisture creates muddy or saturated risk; substantial precipitation today
+high_north,very_wet,0.6,1.2,1.8,0,55,0.0,0,9000,9800,65,10,1.506,MUDDY,0,AVOID,high retained moisture creates muddy or saturated risk; heavy precipitation today
+high_north,saturated,1.0,2.0,3.0,0,52,0.0,0,9000,9800,65,10,2.691,MUDDY,0,AVOID,high retained moisture creates muddy or saturated risk; heavy precipitation today
+high_north,freeze_thaw,0.02,0.15,0.25,0,36,0.0,3,9000,9800,65,10,0.177,IDEAL,83,GOOD,moisture near hero-dirt range; recent freeze-thaw activity
+high_north,recent_snow,0.1,0.4,0.6,0,31,4.0,1,9000,9800,65,10,0.495,SNOW,0,AVOID,recent snowfall affects riding; moderate precipitation today; recent freeze-thaw activity

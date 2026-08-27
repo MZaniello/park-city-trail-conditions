@@ -14,8 +14,37 @@ __pycache__/
 # macOS
 .DS_Store
 
-# Generated data (we can recreate these)
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# API / request caches
+cache/
+
+# Large raw geospatial files
 data/raw/*.graphml
 data/raw/*.tif
+data/raw/expanded_park_city_edges.geojson
 
-.streamlit/secrets.toml
+# Large historical weather datasets
+data/raw/*historical_weather.csv
+data/raw/weather_group_history_progress.csv
+
+# Large modeling datasets
+data/processed/*modeling_dataset*.csv
+
+# Large historical prediction outputs
+data/processed/master_condition_predictions_v3_2.csv
+
+# Legacy forecast/model outputs
+data/processed/forecast_condition_predictions.csv
+data/processed/forecast_condition_predictions_v2.csv
+data/processed/forecast_condition_predictions_v3.csv
+data/processed/forecast_condition_predictions_v3_1.csv
+data/processed/forecast_condition_predictions_v3_2.csv
+data/processed/trail_forecast_features.csv
+
+# Temporary catalog review/intermediate files
+data/processed/expanded_trail_components.csv
+data/processed/expanded_trail_name_summary.csv
+data/processed/expanded_trail_segments_deduplicated.csv
+data/processed/trail_catalog_review_progress.csv
