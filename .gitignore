@@ -66,4 +66,3 @@ data/processed/master_trail_geometries.geojson
 data/processed/master_trail_review.csv
 data/processed/master_trail_review_with_locations.csv
 data/processed/master_trail_triage.csv
-data/processed/weather_group_summary.csv
