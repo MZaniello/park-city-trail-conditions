@@ -14,9 +14,9 @@ FORECAST_URL = "https://api.open-meteo.com/v1/forecast"
 FORECAST_DAYS = 7
 PAST_DAYS = 10
 
-REQUEST_TIMEOUT = 60
-MAX_RETRIES = 8
-WAIT_BETWEEN_GROUPS_SECONDS = 2
+REQUEST_TIMEOUT = 30
+MAX_RETRIES = 3
+WAIT_BETWEEN_GROUPS_SECONDS = 1
 
 METERS_PER_FOOT = 0.3048
 
@@ -518,7 +518,8 @@ def main():
         print(
             f"[{number}/{total_groups}] "
             f"{group_id} "
-            f"({int(group['trail_count'])} trails)"
+            f"({int(group['trail_count'])} trails)",
+            flush=True,
         )
 
         response_data = (
