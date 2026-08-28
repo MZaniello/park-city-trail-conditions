@@ -14,9 +14,10 @@ FORECAST_URL = "https://api.open-meteo.com/v1/forecast"
 FORECAST_DAYS = 7
 PAST_DAYS = 10
 
-REQUEST_TIMEOUT = 30
+BATCH_SIZE = 5
+REQUEST_TIMEOUT = 60
 MAX_RETRIES = 3
-WAIT_BETWEEN_GROUPS_SECONDS = 1
+WAIT_BETWEEN_BATCHES_SECONDS = 2
 
 METERS_PER_FOOT = 0.3048
 
@@ -100,62 +101,61 @@ def get_project_paths():
 # REQUEST
 # ============================================================
 
-def request_group_forecast(group):
+def request_batch_forecast(batch):
 
-    elevation_meters = (
-        float(
-            group[
-                "representative_elevation_feet"
-            ]
+    latitudes = []
+    longitudes = []
+    elevations = []
+
+    for _, group in batch.iterrows():
+
+        latitudes.append(
+            str(
+                float(
+                    group["representative_latitude"]
+                )
+            )
         )
-        * METERS_PER_FOOT
-    )
+
+        longitudes.append(
+            str(
+                float(
+                    group["representative_longitude"]
+                )
+            )
+        )
+
+        elevation_meters = (
+            float(
+                group[
+                    "representative_elevation_feet"
+                ]
+            )
+            * METERS_PER_FOOT
+        )
+
+        elevations.append(
+            str(
+                round(
+                    elevation_meters,
+                    1,
+                )
+            )
+        )
 
     params = {
-        "latitude":
-            float(
-                group[
-                    "representative_latitude"
-                ]
-            ),
-
-        "longitude":
-            float(
-                group[
-                    "representative_longitude"
-                ]
-            ),
-
-        "elevation":
-            round(
-                elevation_meters,
-                1,
-            ),
-
-        "daily":
-            ",".join(
-                DAILY_VARIABLES
-            ),
-
-        "temperature_unit":
-            "fahrenheit",
-
-        "precipitation_unit":
-            "inch",
-
-        "timezone":
-            "America/Denver",
-
-        "forecast_days":
-            FORECAST_DAYS,
-
-        "past_days":
-            PAST_DAYS,
+        "latitude": ",".join(latitudes),
+        "longitude": ",".join(longitudes),
+        "elevation": ",".join(elevations),
+        "daily": ",".join(DAILY_VARIABLES),
+        "temperature_unit": "fahrenheit",
+        "precipitation_unit": "inch",
+        "timezone": "America/Denver",
+        "forecast_days": FORECAST_DAYS,
+        "past_days": PAST_DAYS,
     }
 
-    for attempt in range(
-        MAX_RETRIES
-    ):
+    for attempt in range(MAX_RETRIES):
 
         try:
 
@@ -166,20 +166,24 @@ def request_group_forecast(group):
             )
 
             if response.status_code == 200:
-                return response.json()
+
+                data = response.json()
+
+                if isinstance(data, dict):
+                    data = [data]
+
+                return data
 
             if response.status_code == 429:
 
-                wait_seconds = min(
-                    300,
-                    15 * (
-                        attempt + 1
-                    ),
+                wait_seconds = 15 * (
+                    attempt + 1
                 )
 
                 print(
                     "  Rate limited (429). "
-                    f"Waiting {wait_seconds} seconds..."
+                    f"Waiting {wait_seconds} seconds...",
+                    flush=True,
                 )
 
                 time.sleep(
@@ -196,7 +200,7 @@ def request_group_forecast(group):
             }:
 
                 wait_seconds = min(
-                    120,
+                    30,
                     5 * (
                         2 ** attempt
                     ),
@@ -205,7 +209,8 @@ def request_group_forecast(group):
                 print(
                     f"  Temporary API response "
                     f"{response.status_code}. "
-                    f"Waiting {wait_seconds} seconds..."
+                    f"Waiting {wait_seconds} seconds...",
+                    flush=True,
                 )
 
                 time.sleep(
@@ -222,18 +227,20 @@ def request_group_forecast(group):
                 raise
 
             wait_seconds = min(
-                120,
+                30,
                 5 * (
                     2 ** attempt
                 ),
             )
 
             print(
-                f"  Request error: {error}"
+                f"  Request error: {error}",
+                flush=True,
             )
 
             print(
-                f"  Waiting {wait_seconds} seconds..."
+                f"  Waiting {wait_seconds} seconds...",
+                flush=True,
             )
 
             time.sleep(
@@ -241,7 +248,7 @@ def request_group_forecast(group):
             )
 
     raise RuntimeError(
-        "Forecast request failed "
+        "Forecast batch request failed "
         "after all retries."
     )
 
@@ -424,7 +431,8 @@ def main():
     ) = get_project_paths()
 
     print(
-        "Loading weather groups..."
+        "Loading weather groups...",
+        flush=True,
     )
 
     groups = pd.read_csv(
@@ -433,11 +441,13 @@ def main():
 
     print(
         f"Weather groups: "
-        f"{len(groups):,}"
+        f"{len(groups):,}",
+        flush=True,
     )
 
     print(
-        "Loading trail mapping..."
+        "Loading trail mapping...",
+        flush=True,
     )
 
     trail_mapping = pd.read_csv(
@@ -446,7 +456,8 @@ def main():
 
     print(
         f"Trails: "
-        f"{len(trail_mapping):,}"
+        f"{len(trail_mapping):,}",
+        flush=True,
     )
 
     duplicate_groups = (
@@ -467,12 +478,14 @@ def main():
 
     print(
         f"Duplicate groups: "
-        f"{duplicate_groups:,}"
+        f"{duplicate_groups:,}",
+        flush=True,
     )
 
     print(
         f"Duplicate trails: "
-        f"{duplicate_trails:,}"
+        f"{duplicate_trails:,}",
+        flush=True,
     )
 
     if duplicate_groups > 0:
@@ -492,7 +505,8 @@ def main():
         f"Downloading "
         f"{PAST_DAYS} past days + "
         f"{FORECAST_DAYS} forecast days "
-        "with weather codes..."
+        f"in batches of {BATCH_SIZE}...",
+        flush=True,
     )
 
     frames = []
@@ -501,53 +515,97 @@ def main():
         groups
     )
 
-    for number, (
-        _,
-        group,
-    ) in enumerate(
-        groups.iterrows(),
+    total_batches = (
+        total_groups
+        + BATCH_SIZE
+        - 1
+    ) // BATCH_SIZE
+
+    for batch_number, start_index in enumerate(
+        range(
+            0,
+            total_groups,
+            BATCH_SIZE,
+        ),
         start=1,
     ):
 
-        group_id = (
-            group[
-                "weather_group_id"
+        end_index = min(
+            start_index + BATCH_SIZE,
+            total_groups,
+        )
+
+        batch = (
+            groups
+            .iloc[
+                start_index:end_index
             ]
+            .reset_index(
+                drop=True
+            )
         )
 
         print(
-            f"[{number}/{total_groups}] "
-            f"{group_id} "
-            f"({int(group['trail_count'])} trails)",
+            f"[Batch {batch_number}/{total_batches}] "
+            f"weather groups "
+            f"{start_index + 1}-{end_index}",
             flush=True,
         )
 
         response_data = (
-            request_group_forecast(
-                group
+            request_batch_forecast(
+                batch
             )
         )
 
-        group_data = (
-            parse_group_forecast(
-                group,
-                response_data,
+        if len(response_data) != len(batch):
+
+            raise RuntimeError(
+                "Open-Meteo returned "
+                f"{len(response_data)} locations "
+                f"for a batch containing "
+                f"{len(batch)} weather groups."
             )
+
+        for group_position in range(
+            len(batch)
+        ):
+
+            group = batch.iloc[
+                group_position
+            ]
+
+            location_data = response_data[
+                group_position
+            ]
+
+            group_data = (
+                parse_group_forecast(
+                    group,
+                    location_data,
+                )
+            )
+
+            frames.append(
+                group_data
+            )
+
+        print(
+            f"  Completed batch "
+            f"{batch_number}/{total_batches}",
+            flush=True,
         )
 
-        frames.append(
-            group_data
-        )
-
-        if number < total_groups:
+        if batch_number < total_batches:
 
             time.sleep(
-                WAIT_BETWEEN_GROUPS_SECONDS
+                WAIT_BETWEEN_BATCHES_SECONDS
             )
 
     print()
     print(
-        "Combining weather-group data..."
+        "Combining weather-group data...",
+        flush=True,
     )
 
     group_forecast = (
@@ -615,7 +673,8 @@ def main():
     )
 
     print(
-        "Mapping weather to 373 trails..."
+        "Mapping weather to 373 trails...",
+        flush=True,
     )
 
     trail_forecast = (
